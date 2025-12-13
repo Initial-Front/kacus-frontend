@@ -138,7 +138,7 @@ const Section: React.FC<SectionProps> = ({
                 ${open ? "max-h-40 opacity-100" : "max-h-0 opacity-0"}
             `}
             >
-                <div className="mt-1 ml-2 flex flex-col border-s-2 text-sm text-gray-600 origin-top animate-slideDown">
+                <div className={`mt-2 flex ml-2  flex-col ${openSideBar ? 'border-s-0 ': '  border-s-2' }   text-sm text-gray-600 origin-top animate-slideDown`}>
                     {children}
                 </div>
             </div>
@@ -164,7 +164,7 @@ const SubItem: React.FC<SubItemProps> = ({
     return (
         <Link
             to={link}
-            className="flex items-center gap-2 py-1 ml-7 text-sm text-gray-600 hover:text-gray-900 transition-all duration-300"
+            className={`flex items-center gap-2 py-1 ${openSideBar ? 'ml-0 ': 'ml-7' }  text-sm text-gray-600 hover:text-gray-900 transition-all duration-300`}
         >
             {Icon && openSideBar ? (
                 <Icon className="w-4 h-4 text-gray-500" />
