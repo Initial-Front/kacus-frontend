@@ -119,7 +119,7 @@ const Section: React.FC<SectionProps> = ({
             >
                 <p className="flex items-center gap-2">
                     <Icon size={18}
-                        className={isActive ? "bg-[#1570EF] text-[#1570EF]" : "text-[#535862]"}
+                        className={isActive ? " text-[#1570EF]" : "text-[#535862]"}
                     />   <p className={`${openSideBar ? 'hidden' : 'block'}`}>
                         {label}
                     </p>
@@ -161,6 +161,17 @@ const SubItem: React.FC<SubItemProps> = ({
     icon: Icon,
     openSideBar,
 }) => {
+        const sectionRoutes: Record<string, string[]> = {
+        "Wallet & Treasury": ["/overview", "/WalletMonitoring", "/fundMovement"],
+        "Derivatives Module": ["/Tradingpairs", "/ProductContact"],
+        "User Management": ["/AllUsers", "/FlaggedUsers"],
+    };
+
+        const isActive =
+        sectionRoutes[label]?.some((path) =>
+            location.pathname.startsWith(path)
+        ) ?? false;
+
     return (
         <Link
             to={link}
@@ -169,7 +180,7 @@ const SubItem: React.FC<SubItemProps> = ({
             {Icon && openSideBar ? (
                 <Icon className="w-4 h-4 text-gray-500" />
             ) : (
-                <span className="whitespace-nowrap">{label}</span>
+                <span className={`{${isActive ? " text-[#1570EF]" : "text-[#535862]"} whitespace-nowrap `}>{label}</span>
             )}
         </Link>
     );
