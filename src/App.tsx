@@ -20,6 +20,7 @@ import MarketMarker from './Dashboard/MarketMarker'
 import PrivateMarket from './Dashboard/privateMarket'
 import PrivateDetailPage from './Dashboard/privateMarket/PrivateDetailsPage'
 import OverView from './Dashboard/WalletTreasury/overView'
+import WalletMonitoring from './Dashboard/WalletTreasury/WalletMonitoring'
 
 function App() {
   return (
@@ -46,11 +47,9 @@ function App() {
         <Route path='/ApiDev' element={<ApiDev />} />
         <Route path='/MarketMarker' element={<MarketMarker />} />
         <Route path='/PrivateMarket' element={<PrivateMarket/>} />
-          <Route path='/PrivateMarketDetail/:id' element={<PrivateDetailPage/>} />
-            <Route path='/overview' element={<OverView/>} />
-
-
-
+        <Route path='/PrivateMarketDetail/:id' element={<PrivateDetailPage/>} />
+         <Route path='/overview' element={<OverView/>} />
+        <Route path='/WalletMonitoring' element={<WalletMonitoring/>} />
       </Route>
 
     </Routes>
