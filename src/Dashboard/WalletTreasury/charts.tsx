@@ -120,7 +120,7 @@ export default function OverviewCharts() {
                 </div>
             </div>
 
-            <div className="p-6 bg-white rounded-2xl shadow-sm">
+            <div className="p-6 bg-white rounded-2xl shadow-sm border">
                 <h2 className="text-lg font-semibold mb-1">Margin & Collateral Usage Chart</h2>
                 <p className="text-gray-500 text-sm mb-6">
                     Monitor the utilization of deposited margins and available collaterals

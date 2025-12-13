@@ -204,12 +204,9 @@ function ActionsMenu({ onView }: { onView: () => void }) {
     );
 }
 
-/* ---------------------------
-   Main Table Component
-   --------------------------- */
 
 export default function UsersTable() {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     const [data] = useState<UserRow[]>(MOCK.concat(
     
         MOCK.map((m, i) => ({ ...m, id: `${m.id}-${i + 1}` }))

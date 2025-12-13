@@ -43,7 +43,7 @@ const stackedData = [
 export default function Home() {
     return (
         <div className="w-full min-h-screen bg-white p-6 space-y-6">
-            
+       
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
                 <div>
                     <h1 className="text-2xl font-semibold text-gray-800">
@@ -59,7 +59,6 @@ export default function Home() {
                         variant="outline"
                         className="flex items-center gap-2  h-[40px] p-3 rounded-lg3 border-gray-300 text-gray-700"
                     >
-
                         <span>
                             <svg width="19" height="17" viewBox="0 0 19 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5.83301 12.5002L9.16634 15.8335M9.16634 15.8335L12.4997 12.5002M9.16634 15.8335V8.3335M15.833 12.2859C16.8509 11.4452 17.4997 10.1734 17.4997 8.75016C17.4997 6.21886 15.4476 4.16683 12.9163 4.16683C12.7342 4.16683 12.5639 4.07183 12.4714 3.91495C11.3847 2.07086 9.37837 0.833496 7.08301 0.833496C3.63123 0.833496 0.833008 3.63172 0.833008 7.0835C0.833008 8.80525 1.52921 10.3644 2.65546 11.4948" stroke="#414651" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
@@ -73,8 +72,7 @@ export default function Home() {
                     </Button>
                 </div>
             </div>
-
-        
+   
             <div className="flex flex-wrap  items-center  w-full justify-between">
 
                 <div className="border rounded-md border-gray-300 ">
@@ -111,8 +109,7 @@ export default function Home() {
                     Filters
                 </Button>
             </div>
-
-          
+       
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  mx-auto gap-4">
                 {[
                     { title: "Total Registered Users", value: "124,600", change: "+100%", positive: true },
@@ -138,7 +135,6 @@ export default function Home() {
 
                             </button>
                         </div>
-
 
                         <section className="flex  items-center justify-between mt-4">
                             <div className="flex flex-col">
@@ -212,7 +208,6 @@ export default function Home() {
                 ))}
             </div>
 
-           
             <div className="p-6 bg-white rounded-lg shadow-sm border border-gray-100">
                 <h3 className="text-lg font-medium mb-4 flex items-center gap-3"
                 >User Growth Chart
@@ -238,7 +233,6 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* Bottom Charts */}
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
                 {/* Left */}
                 <div className="p-6 bg-white rounded-lg shadow-sm border border-gray-100">

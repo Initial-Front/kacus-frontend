@@ -92,7 +92,7 @@ const TypeBadge = ({ type }: { type: string }) => {
 
 export default function TreasuryEventsTable() {
     return (
-        <div className="w-full p-6 bg-white rounded-2xl shadow-sm border">
+        <div className="w-full p-6 bg-white rounded-2xl shadow-sm border mt-9">
            
             <div>
                 <h2 className="text-lg font-semibold">Recent Treasury Events Feed</h2>
@@ -137,8 +137,15 @@ export default function TreasuryEventsTable() {
                                     {item.timestamp}
                                 </td>
 
-                                <td className=" w-fit   text-sm rounded-full font-medium">
-                                    {item.transactionId}
+                                <td className=" w-fit    text-sm rounded-full font-medium">
+                                    <div className="px-3 py-1 text-xs rounded-full font-medium w-fit flex justify-center items-center gap-1 bg-blue-100 text-blue-600">
+                                        <span>
+                                                <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <circle cx="3" cy="3" r="3" fill="#2E90FA" />
+                                                </svg>
+                                            </span>
+                                        {item.transactionId}
+                                    </div>
                                 </td>
 
                                 <td className="py-4 px-3">
