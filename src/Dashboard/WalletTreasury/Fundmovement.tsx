@@ -40,7 +40,7 @@ export default function FundMovement() {
             <div className="flex items-center justify-between mb-6">
                 <div>
                     <h1 className="text-xl flex items-center gap-1 font-semibold text-gray-800">
-                       Fund Movement
+                        Fund Movement
                         <span className="ms-4">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6 12L10 8L6 4" stroke="#D5D7DA" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
@@ -48,7 +48,7 @@ export default function FundMovement() {
 
                         </span>
                         <span className="text-sm ">
-                           Fund Movement
+                            Fund Movement
                         </span>
 
                     </h1>
@@ -146,7 +146,7 @@ export default function FundMovement() {
                     </button>
 
 
-             
+
                     <button className="inline-flex min-w-[265px] items-center justify-between gap-3 rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50">
                         <div className="flex justify-center items-center gap-2">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -183,7 +183,7 @@ export default function FundMovement() {
                         <tr>
                             <th className="w-[200px] text-left px-4 py-3 whitespace-nowrap">
                                 <div className=" flex items-center gap-3">
-                                 Transaction ID
+                                    Transaction ID
                                     <span>
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE" strokeWidth="1.5" strokeLinecap="round" stroke-linejoin="round" />
@@ -191,10 +191,10 @@ export default function FundMovement() {
 
                                     </span>
                                 </div>
-                              
+
                             </th>
                             <th className="w-[200px] text-left px-4 py-3 whitespace-nowrap">
-                                  <div className=" flex items-center gap-3">
+                                <div className=" flex items-center gap-3">
                                     Wallet Name
                                     <span>
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -203,22 +203,22 @@ export default function FundMovement() {
 
                                     </span>
                                 </div>
-                                </th>
-                             <th className="w-[200px] text-left px-4 py-3 whitespace-nowrap">
+                            </th>
+                            <th className="w-[200px] text-left px-4 py-3 whitespace-nowrap">
 
-                                  <div className=" flex items-center gap-3">
-                                   Action
+                                <div className=" flex items-center gap-3">
+                                    Action
                                     <span>
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE" strokeWidth="1.5" strokeLinecap="round" stroke-linejoin="round" />
                                         </svg>
 
                                     </span>
-                                </div> 
+                                </div>
 
                             </th>
                             <th className="w-[200px] text-left px-4 py-3 whitespace-nowrap">
-                                  <div className=" flex items-center gap-3">
+                                <div className=" flex items-center gap-3">
                                     Asset
                                     <span>
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -226,85 +226,85 @@ export default function FundMovement() {
                                         </svg>
 
                                     </span>
-                                </div>        
-                                </th>
-                      
+                                </div>
+                            </th>
+
                             <th className="w-[200px] text-left px-4 py-3 whitespace-nowrap">
-                               
-                                 <div className=" flex items-center gap-3">
-                                  Date & Time
+
+                                <div className=" flex items-center gap-3">
+                                    Date & Time
                                     <span>
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE" strokeWidth="1.5" strokeLinecap="round" stroke-linejoin="round" />
                                         </svg>
                                     </span>
-                                </div> 
-                                
-                             </th>
+                                </div>
+
+                            </th>
                             <th className="w-[200px] text-left px-4 py-3 whitespace-nowrap">
-                               Type
-                             
-                                </th>
+                                Type
+
+                            </th>
                             <th className="w-[200px] text-left px-4 py-3 whitespace-nowrap">
-                                  <div className=" flex items-center gap-3">
-                                   Source Wallet
+                                <div className=" flex items-center gap-3">
+                                    Source Wallet
                                     <span>
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE" strokeWidth="1.5" strokeLinecap="round" stroke-linejoin="round" />
                                         </svg>
                                     </span>
-                                </div> 
-                               </th>
+                                </div>
+                            </th>
                             <th className="w-[200px] text-left px-4 py-3 whitespace-nowrap">
-                                  <div className=" flex items-center gap-3">
-                                   Destination Wallet
+                                <div className=" flex items-center gap-3">
+                                    Destination Wallet
                                     <span>
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE" strokeWidth="1.5" strokeLinecap="round" stroke-linejoin="round" />
                                         </svg>
                                     </span>
-                                </div> 
-                                </th>
+                                </div>
+                            </th>
                             <th className="w-[200px] text-left px-4 py-3 whitespace-nowrap">
-                                  <div className=" flex items-center gap-3">
-                                  Asset
+                                <div className=" flex items-center gap-3">
+                                    Asset
                                     <span>
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE" strokeWidth="1.5" strokeLinecap="round" stroke-linejoin="round" />
                                         </svg>
                                     </span>
-                                </div> 
-                                </th>
+                                </div>
+                            </th>
                             <th className="w-[200px] text-left px-4 py-3 whitespace-nowrap">
-                                  <div className=" flex items-center gap-3">
+                                <div className=" flex items-center gap-3">
                                     Amount (Native)
                                     <span>
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE" strokeWidth="1.5" strokeLinecap="round" stroke-linejoin="round" />
                                         </svg>
                                     </span>
-                                </div> 
-                               </th>
+                                </div>
+                            </th>
                             <th className="w-[200px] text-left px-4 py-3 whitespace-nowrap">
-                                  <div className=" flex items-center gap-3">
-                                  Initiated By
+                                <div className=" flex items-center gap-3">
+                                    Initiated By
                                     <span>
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE" strokeWidth="1.5" strokeLinecap="round" stroke-linejoin="round" />
                                         </svg>
                                     </span>
-                                </div> 
-                               </th>
-                                <th className="w-[200px] text-left px-4 py-3 whitespace-nowrap">
-                                  <div className=" flex items-center gap-3">
-                                  Reason / Context
+                                </div>
+                            </th>
+                            <th className="w-[200px] text-left px-4 py-3 whitespace-nowrap">
+                                <div className=" flex items-center gap-3">
+                                    Reason / Context
                                     <span>
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE" strokeWidth="1.5" strokeLinecap="round" stroke-linejoin="round" />
                                         </svg>
                                     </span>
-                                </div> 
-                               </th>
+                                </div>
+                            </th>
                         </tr>
                     </thead>
 
@@ -324,27 +324,27 @@ export default function FundMovement() {
                                 </td>
                                 <td className="w-[200px] text-left py-7 px-4  whitespace-nowrap">
                                     <div className="flex items-center  gap-3">
-                                       <img src="" className="w-[40px] h-[40px] border rounded-full overflow-hidden" alt="wallet name" loading="lazy"/>   {w.name}
+                                        <img src="" className="w-[40px] h-[40px] border rounded-full overflow-hidden" alt="wallet name" loading="lazy" /> {w.name}
                                     </div>
-                                  </td>
+                                </td>
+                                <td className="w-[200px] text-center py-5 px-4  whitespace-nowrap">
+                                    <div className="px-7">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.0013 13.3327C7.63464 13.3327 7.32075 13.2021 7.05964 12.941C6.79852 12.6799 6.66797 12.366 6.66797 11.9993C6.66797 11.6327 6.79852 11.3188 7.05964 11.0577C7.32075 10.7966 7.63464 10.666 8.0013 10.666C8.36797 10.666 8.68186 10.7966 8.94297 11.0577C9.20408 11.3188 9.33464 11.6327 9.33464 11.9993C9.33464 12.366 9.20408 12.6799 8.94297 12.941C8.68186 13.2021 8.36797 13.3327 8.0013 13.3327ZM8.0013 9.33268C7.63464 9.33268 7.32075 9.20213 7.05964 8.94102C6.79852 8.6799 6.66797 8.36602 6.66797 7.99935C6.66797 7.63268 6.79852 7.31879 7.05964 7.05768C7.32075 6.79657 7.63464 6.66602 8.0013 6.66602C8.36797 6.66602 8.68186 6.79657 8.94297 7.05768C9.20408 7.31879 9.33464 7.63268 9.33464 7.99935C9.33464 8.36602 9.20408 8.6799 8.94297 8.94102C8.68186 9.20213 8.36797 9.33268 8.0013 9.33268ZM8.0013 5.33268C7.63464 5.33268 7.32075 5.20213 7.05964 4.94102C6.79852 4.6799 6.66797 4.36602 6.66797 3.99935C6.66797 3.63268 6.79852 3.31879 7.05964 3.05768C7.32075 2.79657 7.63464 2.66602 8.0013 2.66602C8.36797 2.66602 8.68186 2.79657 8.94297 3.05768C9.20408 3.31879 9.33464 3.63268 9.33464 3.99935C9.33464 4.36602 9.20408 4.6799 8.94297 4.94102C8.68186 5.20213 8.36797 5.33268 8.0013 5.33268Z" fill="#A4A7AE" />
+                                        </svg>
+                                    </div>
+                                </td>
                                 <td className="text-left py-5 px-4  rounded-full w-[200px] whitespace-nowrap">
                                     <div className=" text-[#175CD3] bg-[#C7D7FE] flex justify-center items-center gap-2 border border-[#C7D7FE]  px-2  rounded-full w-fit">
                                         <span>
                                             <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="3" cy="3" r="3" fill="#6172F3" />
                                             </svg>
-
                                         </span>
                                         {w.asset}
                                     </div>
                                 </td>
-                                <td className="w-[200px] text-left py-5 px-4  whitespace-nowrap">
-                                    <div>
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M10.35 7.35C10.25 7.25 10.1333 7.2 10 7.2C9.86667 7.2 9.75 7.25 9.65 7.35L6.85 10.15C6.68333 10.3167 6.64167 10.5 6.725 10.7C6.80833 10.9 6.96667 11 7.2 11L12.8 11C13.0333 11 13.1917 10.9 13.275 10.7C13.3583 10.5 13.3167 10.3167 13.15 10.15L10.35 7.35ZM10 -8.74228e-07C11.3833 -7.53293e-07 12.6833 0.262666 13.9 0.788C15.1167 1.31333 16.175 2.02566 17.075 2.925C17.975 3.825 18.6873 4.88333 19.212 6.1C19.7367 7.31667 19.9993 8.61667 20 10C20 11.3833 19.7373 12.6833 19.212 13.9C18.6867 15.1167 17.9743 16.175 17.075 17.075C16.175 17.975 15.1167 18.6873 13.9 19.212C12.6833 19.7367 11.3833 19.9993 10 20C8.61667 20 7.31667 19.7373 6.1 19.212C4.88333 18.6867 3.825 17.9743 2.925 17.075C2.025 16.175 1.31233 15.1167 0.787001 13.9C0.261668 12.6833 -0.000666819 11.3833 8.74228e-07 10C9.95163e-07 8.61667 0.262668 7.31667 0.788001 6.1C1.31333 4.88333 2.02567 3.825 2.925 2.925C3.825 2.025 4.88333 1.31233 6.1 0.786999C7.31667 0.261666 8.61667 -0.000668567 10 -8.74228e-07ZM10 2C7.78333 2 5.89567 2.779 4.337 4.337C2.77833 5.895 1.99933 7.78267 2 10C2 12.2167 2.779 14.1043 4.337 15.663C5.895 17.2217 7.78267 18.0007 10 18C12.2167 18 14.1043 17.221 15.663 15.663C17.2217 14.105 18.0007 12.2173 18 10C18 7.78333 17.221 5.89567 15.663 4.337C14.105 2.77833 12.2173 1.99933 10 2Z" fill="#717986" />
-                                        </svg>
-                                    </div>
-                                </td>
+
                                 <td className="w-[200px] text-left py-5 px-4 whitespace-nowrap">{w.role}</td>
                                 <td className="text-left py-5 px-4  rounded-full w-[200px] whitespace-nowrap">
                                     <div className="   border   px-2 py-1 rounded-full w-fit">
