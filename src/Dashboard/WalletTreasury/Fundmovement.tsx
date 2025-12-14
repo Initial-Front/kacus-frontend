@@ -33,14 +33,14 @@ const wallets: Wallet[] = [
     },
 ];
 
-export default function WalletMonitoring() {
+export default function FundMovement() {
     return (
         <div className="w-full p-6">
 
             <div className="flex items-center justify-between mb-6">
                 <div>
                     <h1 className="text-xl flex items-center gap-1 font-semibold text-gray-800">
-                        Wallet & Treasury
+                       Fund Movement
                         <span className="ms-4">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6 12L10 8L6 4" stroke="#D5D7DA" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
@@ -48,7 +48,7 @@ export default function WalletMonitoring() {
 
                         </span>
                         <span className="text-sm ">
-                            Wallet Monitoring
+                           Fund Movement
                         </span>
 
                     </h1>
@@ -76,7 +76,7 @@ export default function WalletMonitoring() {
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
 
                     <div className="inline-flex min-w-[210px] items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-[10px] text-sm font-medium text-gray-900 shadow-sm">
-                        <span>Users Wallet List</span>
+                        <span>Fund Movement List</span>
                         <span className="rounded-full bg-gray-100 px-2 py-0.5 text-xs font-semibold text-gray-700">
                             2392
                         </span>
@@ -126,7 +126,7 @@ export default function WalletMonitoring() {
                             </svg>
 
                         </span>
-                        <p> <span className="text-[#A4A7AE] font-medium">Sort: </span>assets</p>
+                        <p> <span className="text-[#A4A7AE] font-medium">Sort: </span>By date range</p>
                         <ChevronDown size={16} />
                     </button>
 
@@ -139,14 +139,14 @@ export default function WalletMonitoring() {
                                 <path d="M10.0013 11.459H6.66797C6.3263 11.459 6.04297 11.1757 6.04297 10.834C6.04297 10.4923 6.3263 10.209 6.66797 10.209H10.0013C10.343 10.209 10.6263 10.4923 10.6263 10.834C10.6263 11.1757 10.343 11.459 10.0013 11.459Z" fill="#25272C" />
                                 <path d="M13.3346 14.791H6.66797C6.3263 14.791 6.04297 14.5077 6.04297 14.166C6.04297 13.8243 6.3263 13.541 6.66797 13.541H13.3346C13.6763 13.541 13.9596 13.8243 13.9596 14.166C13.9596 14.5077 13.6763 14.791 13.3346 14.791Z" fill="#25272C" />
                             </svg>
-                            <span>Wallet ID</span>
+                            <span>By Asset</span>
                         </div>
 
                         <ChevronDown size={16} />
                     </button>
 
 
-                    {/* Wallet Range */}
+             
                     <button className="inline-flex min-w-[265px] items-center justify-between gap-3 rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50">
                         <div className="flex justify-center items-center gap-2">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -155,13 +155,12 @@ export default function WalletMonitoring() {
                                 <path d="M10.0013 11.459H6.66797C6.3263 11.459 6.04297 11.1757 6.04297 10.834C6.04297 10.4923 6.3263 10.209 6.66797 10.209H10.0013C10.343 10.209 10.6263 10.4923 10.6263 10.834C10.6263 11.1757 10.343 11.459 10.0013 11.459Z" fill="#25272C" />
                                 <path d="M13.3346 14.791H6.66797C6.3263 14.791 6.04297 14.5077 6.04297 14.166C6.04297 13.8243 6.3263 13.541 6.66797 13.541H13.3346C13.6763 13.541 13.9596 13.8243 13.9596 14.166C13.9596 14.5077 13.6763 14.791 13.3346 14.791Z" fill="#25272C" />
                             </svg>
-                            <span>Wallet Range</span>
+                            <span>By Wallet</span>
                         </div>
                         <ChevronDown size={16} />
                     </button>
 
 
-                    {/* USD Range */}
                     <button className="inline-flex min-w-[170px] items-center justify-between gap-3 rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50">
                         <div className="flex justify-center items-center gap-2">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -170,7 +169,7 @@ export default function WalletMonitoring() {
                                 <path d="M10.0013 11.459H6.66797C6.3263 11.459 6.04297 11.1757 6.04297 10.834C6.04297 10.4923 6.3263 10.209 6.66797 10.209H10.0013C10.343 10.209 10.6263 10.4923 10.6263 10.834C10.6263 11.1757 10.343 11.459 10.0013 11.459Z" fill="#25272C" />
                                 <path d="M13.3346 14.791H6.66797C6.3263 14.791 6.04297 14.5077 6.04297 14.166C6.04297 13.8243 6.3263 13.541 6.66797 13.541H13.3346C13.6763 13.541 13.9596 13.8243 13.9596 14.166C13.9596 14.5077 13.6763 14.791 13.3346 14.791Z" fill="#25272C" />
                             </svg>
-                            <span>USDD range</span>
+                            <span>By Status</span>
                         </div>
                         <ChevronDown size={16} />
                     </button>
@@ -184,7 +183,7 @@ export default function WalletMonitoring() {
                         <tr>
                             <th className="w-[200px] text-left px-4 py-3 whitespace-nowrap">
                                 <div className=" flex items-center gap-3">
-                                   Wallet ID
+                                 Transaction ID
                                     <span>
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE" strokeWidth="1.5" strokeLinecap="round" stroke-linejoin="round" />
@@ -205,6 +204,19 @@ export default function WalletMonitoring() {
                                     </span>
                                 </div>
                                 </th>
+                             <th className="w-[200px] text-left px-4 py-3 whitespace-nowrap">
+
+                                  <div className=" flex items-center gap-3">
+                                   Action
+                                    <span>
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE" strokeWidth="1.5" strokeLinecap="round" stroke-linejoin="round" />
+                                        </svg>
+
+                                    </span>
+                                </div> 
+
+                            </th>
                             <th className="w-[200px] text-left px-4 py-3 whitespace-nowrap">
                                   <div className=" flex items-center gap-3">
                                     Asset
@@ -216,23 +228,11 @@ export default function WalletMonitoring() {
                                     </span>
                                 </div>        
                                 </th>
-                            <th className="w-[200px] text-left px-4 py-3 whitespace-nowrap">
-
-                                  <div className=" flex items-center gap-3">
-                                    Summary
-                                    <span>
-                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE" strokeWidth="1.5" strokeLinecap="round" stroke-linejoin="round" />
-                                        </svg>
-
-                                    </span>
-                                </div> 
-
-                            </th>
+                      
                             <th className="w-[200px] text-left px-4 py-3 whitespace-nowrap">
                                
                                  <div className=" flex items-center gap-3">
-                                    Role
+                                  Date & Time
                                     <span>
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE" strokeWidth="1.5" strokeLinecap="round" stroke-linejoin="round" />
@@ -242,12 +242,12 @@ export default function WalletMonitoring() {
                                 
                              </th>
                             <th className="w-[200px] text-left px-4 py-3 whitespace-nowrap">
-                                Balance
+                               Type
                              
                                 </th>
                             <th className="w-[200px] text-left px-4 py-3 whitespace-nowrap">
                                   <div className=" flex items-center gap-3">
-                                   NGN Equivalent
+                                   Source Wallet
                                     <span>
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE" strokeWidth="1.5" strokeLinecap="round" stroke-linejoin="round" />
@@ -257,7 +257,7 @@ export default function WalletMonitoring() {
                                </th>
                             <th className="w-[200px] text-left px-4 py-3 whitespace-nowrap">
                                   <div className=" flex items-center gap-3">
-                                   Derivatives Role
+                                   Destination Wallet
                                     <span>
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE" strokeWidth="1.5" strokeLinecap="round" stroke-linejoin="round" />
@@ -267,7 +267,7 @@ export default function WalletMonitoring() {
                                 </th>
                             <th className="w-[200px] text-left px-4 py-3 whitespace-nowrap">
                                   <div className=" flex items-center gap-3">
-                                   Last Transaction
+                                  Asset
                                     <span>
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE" strokeWidth="1.5" strokeLinecap="round" stroke-linejoin="round" />
@@ -277,7 +277,7 @@ export default function WalletMonitoring() {
                                 </th>
                             <th className="w-[200px] text-left px-4 py-3 whitespace-nowrap">
                                   <div className=" flex items-center gap-3">
-                                     Status
+                                    Amount (Native)
                                     <span>
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE" strokeWidth="1.5" strokeLinecap="round" stroke-linejoin="round" />
@@ -287,7 +287,17 @@ export default function WalletMonitoring() {
                                </th>
                             <th className="w-[200px] text-left px-4 py-3 whitespace-nowrap">
                                   <div className=" flex items-center gap-3">
-                                    Custody Method
+                                  Initiated By
+                                    <span>
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE" strokeWidth="1.5" strokeLinecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                </div> 
+                               </th>
+                                <th className="w-[200px] text-left px-4 py-3 whitespace-nowrap">
+                                  <div className=" flex items-center gap-3">
+                                  Reason / Context
                                     <span>
                                         <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3.5 7.5L6 10L8.5 7.5M3.5 4.5L6 2L8.5 4.5" stroke="#A4A7AE" strokeWidth="1.5" strokeLinecap="round" stroke-linejoin="round" />
@@ -302,7 +312,7 @@ export default function WalletMonitoring() {
                         {wallets.map((w, i) => (
                             <tr key={i} className="border-b  py-5">
                                 <td className="text-left py-7 px-4  rounded-full w-[200px] whitespace-nowrap">
-                                    <div className=" text-[#175CD3] bg-[#C7D7FE] flex justify-center items-center gap-2 border border-[#C7D7FE]  px-2 rounded-full w-fit">
+                                    <div className=" text-[#175CD3] bg-[#C7D7FE] flex justify-center items-center gap-2 border border-[#C7D7FE]  px-2  rounded-full w-fit">
                                         <span>
                                             <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="3" cy="3" r="3" fill="#6172F3" />
@@ -345,7 +355,7 @@ export default function WalletMonitoring() {
                                 <td className="w-[200px] text-left py-5 px-4  whitespace-nowrap">{w.derivativesRole}</td>
                                 <td className="w-[200px] text-left py-5 px-4  whitespace-nowrap">{w.lastTransaction}</td>
                                 <td className="w-[200px] text-left py-5 px-4  whitespace-nowrap">
-                                    <div className="px-2  rounded-full flex justify-center items-center gap-2 border border-[#FEDF89] text-[#B54708] bg-[#FFFAEB] text-xs font-medium">
+                                    <div className="px-2 py-1 rounded-full flex justify-center items-center gap-2 border border-[#FEDF89] text-[#B54708] bg-[#FFFAEB] text-xs font-medium">
                                         <span>
                                             <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="4" cy="4" r="3" fill="#F79009" />

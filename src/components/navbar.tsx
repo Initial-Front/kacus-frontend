@@ -97,7 +97,7 @@ const Section: React.FC<SectionProps> = ({
     openSideBar
 }) => {
     const sectionRoutes: Record<string, string[]> = {
-        "Wallet & Treasury": ["/overview", "/WalletMonitoring", "/fundMovement"],
+        "Wallet & Treasury": ["/overview", "/WalletMonitoring", "/FundMovement"],
         "Derivatives Module": ["/Tradingpairs", "/ProductContact"],
         "User Management": ["/AllUsers", "/FlaggedUsers"],
     };
@@ -390,7 +390,7 @@ export default function Sidebar({ toggleSideBar, setToggleSideBar }: sideBarProp
                         />
                         <SubItem
                             label="Fund Movement"
-                            link="/fundMovement"
+                            link="/FundMovement"
                             icon={ArrowLeftRight}
                             openSideBar={openSideBar}
                         />
