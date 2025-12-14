@@ -322,7 +322,11 @@ export default function FundMovement() {
                                         {w.walletId}
                                     </div>
                                 </td>
-                                <td className="w-[200px] text-left py-7 px-4  whitespace-nowrap">{w.name}</td>
+                                <td className="w-[200px] text-left py-7 px-4  whitespace-nowrap">
+                                    <div className="flex items-center  gap-3">
+                                       <img src="" className="w-[40px] h-[40px] border rounded-full overflow-hidden" alt="wallet name" loading="lazy"/>   {w.name}
+                                    </div>
+                                  </td>
                                 <td className="text-left py-5 px-4  rounded-full w-[200px] whitespace-nowrap">
                                     <div className=" text-[#175CD3] bg-[#C7D7FE] flex justify-center items-center gap-2 border border-[#C7D7FE]  px-2  rounded-full w-fit">
                                         <span>
