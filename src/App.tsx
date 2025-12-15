@@ -22,6 +22,7 @@ import PrivateDetailPage from './Dashboard/privateMarket/PrivateDetailsPage'
 import OverView from './Dashboard/WalletTreasury/overView'
 import WalletMonitoring from './Dashboard/WalletTreasury/WalletMonitoring'
 import FundMovement from './Dashboard/WalletTreasury/Fundmovement'
+import Messaging from './Dashboard/Messaging'
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
          <Route path='/overview' element={<OverView/>} />
         <Route path='/WalletMonitoring' element={<WalletMonitoring/>} />
          <Route path='/FundMovement' element={<FundMovement/>} />
+         <Route path='/Message' element={<Messaging/>} />
       </Route>
 
     </Routes>

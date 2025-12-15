@@ -161,9 +161,9 @@ const SubItem: React.FC<SubItemProps> = ({
     icon: Icon,
     openSideBar,
 }) => {
-     const location = useLocation();
+    const location = useLocation();
 
-  const isActive = location.pathname.startsWith(link);
+    const isActive = location.pathname.startsWith(link);
 
     return (
         <Link
@@ -467,16 +467,20 @@ export default function Sidebar({ toggleSideBar, setToggleSideBar }: sideBarProp
                         <span className={`${openSideBar ? 'hidden' : 'block'}`}> Documents & Content</span>
                     </Link>
 
-                    <button className="flex items-center gap-2  p-2 mb-[50px] rounded-lg hover:bg-gray-100 w-full">
+                    <Link
+                        to={'/Message'}
+                        className={`flex items-center gap-2  p-2 rounded-lg hover:bg-gray-100 w-full
+                    ${location.pathname === "/Message" ? "text-[#1570EF]  bg-blue-50" : "bg-transparent"}
+                `}>
                         <span>
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M18.3333 5.20768V9.45766C18.3333 10.516 17.9833 11.4077 17.3583 12.0243C16.7417 12.6493 15.85 12.9993 14.7917 12.9993V14.5077C14.7917 15.0743 14.1583 15.416 13.6917 15.0993L12.8833 14.566C12.9583 14.3077 12.9917 14.0243 12.9917 13.7243V10.3327C12.9917 8.6327 11.8583 7.49935 10.1583 7.49935H4.5C4.38333 7.49935 4.275 7.5077 4.16667 7.51603V5.20768C4.16667 3.08268 5.58333 1.66602 7.70834 1.66602H14.7917C16.9167 1.66602 18.3333 3.08268 18.3333 5.20768Z" stroke="#535862" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M12.9917 10.3334V13.725C12.9917 14.025 12.9583 14.3083 12.8833 14.5667C12.575 15.7917 11.5583 16.5583 10.1583 16.5583H7.89167L5.375 18.2333C5 18.4917 4.5 18.2167 4.5 17.7667V16.5583C3.65 16.5583 2.94167 16.275 2.45 15.7833C1.95 15.2833 1.66667 14.575 1.66667 13.725V10.3334C1.66667 8.75002 2.65 7.65835 4.16667 7.51668C4.275 7.50835 4.38333 7.5 4.5 7.5H10.1583C11.8583 7.5 12.9917 8.63335 12.9917 10.3334Z" stroke="#535862" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M18.3333 5.20768V9.45766C18.3333 10.516 17.9833 11.4077 17.3583 12.0243C16.7417 12.6493 15.85 12.9993 14.7917 12.9993V14.5077C14.7917 15.0743 14.1583 15.416 13.6917 15.0993L12.8833 14.566C12.9583 14.3077 12.9917 14.0243 12.9917 13.7243V10.3327C12.9917 8.6327 11.8583 7.49935 10.1583 7.49935H4.5C4.38333 7.49935 4.275 7.5077 4.16667 7.51603V5.20768C4.16667 3.08268 5.58333 1.66602 7.70834 1.66602H14.7917C16.9167 1.66602 18.3333 3.08268 18.3333 5.20768Z" stroke={location.pathname === "/Message" ? "#1570EF" : "#535862"} stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M12.9917 10.3334V13.725C12.9917 14.025 12.9583 14.3083 12.8833 14.5667C12.575 15.7917 11.5583 16.5583 10.1583 16.5583H7.89167L5.375 18.2333C5 18.4917 4.5 18.2167 4.5 17.7667V16.5583C3.65 16.5583 2.94167 16.275 2.45 15.7833C1.95 15.2833 1.66667 14.575 1.66667 13.725V10.3334C1.66667 8.75002 2.65 7.65835 4.16667 7.51668C4.275 7.50835 4.38333 7.5 4.5 7.5H10.1583C11.8583 7.5 12.9917 8.63335 12.9917 10.3334Z" stroke={location.pathname === "/Message" ? "#1570EF" : "#535862"} stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
 
                         </span>
                         <span className={`${openSideBar ? 'hidden' : 'block'}`}> Messaging</span>
-                    </button>
+                    </Link>
                     <hr />
                     <Link
                         to="/dashboard/Admin"
@@ -755,16 +759,21 @@ export default function Sidebar({ toggleSideBar, setToggleSideBar }: sideBarProp
                         Documents & Content
                     </Link>
 
-                    <button className="flex items-center gap-2  p-2 mb-[50px] rounded-lg hover:bg-gray-100">
+
+                    <Link
+                        to={'/Message'}
+                        className={`flex items-center gap-2  p-2 rounded-lg hover:bg-gray-100
+                    ${location.pathname === '/Messaging' ? "text-[#1570EF]  bg-blue-50" : "bg-transparent"}
+                `}>
                         <span>
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M18.3333 5.20768V9.45766C18.3333 10.516 17.9833 11.4077 17.3583 12.0243C16.7417 12.6493 15.85 12.9993 14.7917 12.9993V14.5077C14.7917 15.0743 14.1583 15.416 13.6917 15.0993L12.8833 14.566C12.9583 14.3077 12.9917 14.0243 12.9917 13.7243V10.3327C12.9917 8.6327 11.8583 7.49935 10.1583 7.49935H4.5C4.38333 7.49935 4.275 7.5077 4.16667 7.51603V5.20768C4.16667 3.08268 5.58333 1.66602 7.70834 1.66602H14.7917C16.9167 1.66602 18.3333 3.08268 18.3333 5.20768Z" stroke="#535862" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
-                                <path d="M12.9917 10.3334V13.725C12.9917 14.025 12.9583 14.3083 12.8833 14.5667C12.575 15.7917 11.5583 16.5583 10.1583 16.5583H7.89167L5.375 18.2333C5 18.4917 4.5 18.2167 4.5 17.7667V16.5583C3.65 16.5583 2.94167 16.275 2.45 15.7833C1.95 15.2833 1.66667 14.575 1.66667 13.725V10.3334C1.66667 8.75002 2.65 7.65835 4.16667 7.51668C4.275 7.50835 4.38333 7.5 4.5 7.5H10.1583C11.8583 7.5 12.9917 8.63335 12.9917 10.3334Z" stroke="#535862" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M18.3333 5.20768V9.45766C18.3333 10.516 17.9833 11.4077 17.3583 12.0243C16.7417 12.6493 15.85 12.9993 14.7917 12.9993V14.5077C14.7917 15.0743 14.1583 15.416 13.6917 15.0993L12.8833 14.566C12.9583 14.3077 12.9917 14.0243 12.9917 13.7243V10.3327C12.9917 8.6327 11.8583 7.49935 10.1583 7.49935H4.5C4.38333 7.49935 4.275 7.5077 4.16667 7.51603V5.20768C4.16667 3.08268 5.58333 1.66602 7.70834 1.66602H14.7917C16.9167 1.66602 18.3333 3.08268 18.3333 5.20768Z" stroke={location.pathname === "/Messaging" ? "#1570EF" : "#535862"} stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M12.9917 10.3334V13.725C12.9917 14.025 12.9583 14.3083 12.8833 14.5667C12.575 15.7917 11.5583 16.5583 10.1583 16.5583H7.89167L5.375 18.2333C5 18.4917 4.5 18.2167 4.5 17.7667V16.5583C3.65 16.5583 2.94167 16.275 2.45 15.7833C1.95 15.2833 1.66667 14.575 1.66667 13.725V10.3334C1.66667 8.75002 2.65 7.65835 4.16667 7.51668C4.275 7.50835 4.38333 7.5 4.5 7.5H10.1583C11.8583 7.5 12.9917 8.63335 12.9917 10.3334Z" stroke={location.pathname === "/Messaging" ? "#1570EF" : "#535862"} stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
 
                         </span>
                         Messaging
-                    </button>
+                    </Link>
                     <hr />
                     <Link
                         to="/dashboard/Admin"
