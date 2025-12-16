@@ -47,7 +47,7 @@ export default function  ProductContact() {
 
     return (
         <div className="w-full p-6 bg-white min-h-screen ">
-            <div className="flex items-center justify-between mb-5">
+            <div className="flex flex-col md:flex-row items-center  gap-8 md:gap-0 justify-between mb-5">
                 <div>
                     <h1 className="text-xl font-semibold text-gray-800">Derivatives Module</h1>
                     <p className="text-sm text-gray-500">Manage tradable assets and trading pairs available for spot (instant) trading</p>
@@ -57,16 +57,16 @@ export default function  ProductContact() {
                     className="px-4 py-2 bg-blue-600 text-white cursor-pointer rounded-lg">+ New Contracts</button>
             </div>
 
-            <div className="flex items-center justify-between mb-5">
-                <button className="border px-4 py-2 rounded-lg">Product Contract<span className="ml-2 bg-gray-200 px-2 py-1 rounded">{pairs.length}</span></button>
+            <div className="flex flex-col gap-4 md:gap-0 md:flex-row md:items-center justify-between mb-5">
+                <button className="border w-fit px-4 py-2 rounded-lg">Product Contract<span className="ml-2 bg-gray-200 px-2 py-1 rounded">{pairs.length}</span></button>
 
-                <div className="flex items-center space-x-3">
+                <div className="flex flex-col gap-5 md:gap-0 md:flex-row md:items-center md:space-x-3">
                     <div className="relative w-72">
                         <input className="w-full border rounded-lg pl-10 py-2 text-sm" placeholder="Search" />
                         <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
                     </div>
 
-                    <button className="flex items-center border px-3 py-2 rounded-lg text-sm">
+                    <button className="flex items-center border w-fit px-3 py-2 rounded-lg text-sm">
                         <span>
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5 10H15M2.5 5H17.5M7.5 15H12.5" stroke="#414651" strokeWidth="1.66667" stroke-linecap="round" stroke-linejoin="round" />
@@ -102,7 +102,7 @@ export default function  ProductContact() {
                 <thead className="text-gray-500 text-xs border-b">
                     <tr>
                         <th className="p-3"><input type="checkbox" /></th>
-                        <th className="p-3 text-left ">
+                        <th className="p-3 text-left whitespace-nowrap ">
                             <div className="flex items-center gap-1">
                                 Pair
                                 <span>
@@ -113,7 +113,7 @@ export default function  ProductContact() {
                                 </span>
                             </div>
                         </th>
-                        <th className="p-3 text-left ">
+                        <th className="p-3 text-left whitespace-nowrap  ">
                             <div className="flex items-center gap-1">
                                 Min Order
                                 <span>
@@ -124,7 +124,7 @@ export default function  ProductContact() {
                                 </span>
                             </div>
                         </th>
-                        <th className="p-3 text-left ">
+                        <th className="p-3 text-left whitespace-nowrap  ">
                             <div className="flex items-center gap-1">
                                 Fee Rate
                                 <span>
@@ -135,7 +135,7 @@ export default function  ProductContact() {
                                 </span>
                             </div>
                         </th>
-                        <th className="p-3 text-left ">
+                        <th className="p-3 text-left whitespace-nowrap ">
                             <div className="flex items-center gap-1">
                                 Expiry Date
                                 <span>
@@ -146,7 +146,7 @@ export default function  ProductContact() {
                                 </span>
                             </div>
                         </th>
-                        <th className="p-3 text-left ">
+                        <th className="p-3 text-left whitespace-nowrap ">
                             <div className="flex items-center gap-1">
                                 Status
                                 <span>
@@ -157,7 +157,7 @@ export default function  ProductContact() {
                             </div>
 
                         </th>
-                        <th className="p-3 text-right  ">
+                        <th className="p-3 text-right  whitespace-nowrap ">
                             <div className="flex items-center gap-1">
                                 Actions
                                 <span>
@@ -181,7 +181,7 @@ export default function  ProductContact() {
                                     <input type="checkbox" />
                                 </div>
                             </td>
-                            <td className="p-3 font-medium flex items-center gap-2">
+                            <td className="p-3 font-medium flex items-center gap-2 whitespace-nowrap ">
                                 <div>
                                     {pair.symbol === "ADA/NGN" ? (
                                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -231,11 +231,11 @@ export default function  ProductContact() {
                                     <div className="text-gray-500 text-xs">{pair.symbol}</div>
                                 </div>
                             </td>
-                            <td className="p-3">{pair.minOrder}</td>
-                            <td className="p-3">{pair.feeRate}</td>
-                            <td className="p-3">{pair.expiry}</td>
-                            <td className="p-3"><span className={`px-2 py-1 rounded text-xs ${pair.status === "Active" ? "bg-green-100 text-green-600" : pair.status === "Paused" ? "bg-yellow-100 text-yellow-600" : "bg-blue-100 text-blue-600"}`}>{pair.status}</span></td>
-                            <td className="p-3 flex justify-end space-x-3">
+                            <td className="p-3 whitespace-nowrap ">{pair.minOrder}</td>
+                            <td className="p-3 whitespace-nowrap ">{pair.feeRate}</td>
+                            <td className="p-3 whitespace-nowrap ">{pair.expiry}</td>
+                            <td className="p-3 whitespace-nowrap "><span className={`px-2 py-1 rounded text-xs ${pair.status === "Active" ? "bg-green-100 text-green-600" : pair.status === "Paused" ? "bg-yellow-100 text-yellow-600" : "bg-blue-100 text-blue-600"}`}>{pair.status}</span></td>
+                            <td className="p-3 whitespace-nowrap  flex justify-end space-x-3">
                                 <button><Edit className="h-4 w-4 text-gray-500" /></button>
                                 <button onClick={() => deletePair(pair.id)}><Trash2 className="h-4 w-4 text-red-500" /></button>
                                 <button><MoreVertical className="h-4 w-4 text-gray-500" /></button>

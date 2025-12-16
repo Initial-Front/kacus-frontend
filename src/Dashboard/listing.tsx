@@ -33,14 +33,16 @@ export default function ListingsPage() {
                 </div>
               </div>
 
-        <div className="mb-6 py-2">
-          <div className="flex items-center border-b-2 w-full gap-4 px-6">
-            <button onClick={() => setTab("spot")} className={`px-4 py-2  ${tab === "spot" ? " border-b-2 border-blue-600 " : "border-0"}`}>Spot</button>
-            <button onClick={() => setTab("futures")} className={`px-4 py-2  ${tab === "futures" ? " border-b-2 border-blue-600 " : "border-0"}`}>Futures</button>
+        <div className="mb-6 pt-2  border-b-2">
+          <div className="flex items-center w-full gap-4 px-6">
+            <button onClick={() => setTab("spot")} className={`px-4  `}>Spot</button>
+            <button onClick={() => setTab("futures")} className={`px-4   `}>Futures</button>
+            
           </div>
+          <div className={`w-16 h-1 mx-7 ${tab === "spot" ? "  translate-x-0" : "translate-x-20"} transition-all duration-300 ease-in-out  bg-blue-600  border-b-2`}></div>
         </div>
 
-        <div className="p-6">
+        <div className="p-3 md:p-6">
           {tab === "spot" ?  <ListingsSpot/> : <ListingsFutures/>}
         </div>
       </div>

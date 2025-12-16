@@ -32,7 +32,7 @@ const initialData: Pair[] = [
     { id: 9, name: "Bitcoin", symbol: "BTC/NGN", minOrder: "1000", feeRate: "0.12%", expiry: "2024-08-09", status: "Active" },
 ];
 
-export default function TradingPairsTable() {
+export default function TradingPairs() {
     const [pairs, setPairs] = useState<Pair[]>(initialData);
     const [page, setPage] = useState(1);
     const pageSize = 5;
@@ -46,21 +46,22 @@ export default function TradingPairsTable() {
     };
 
     return (
-        <div className="w-full p-6 bg-white min-h-screen ">
-            <div className="flex items-center justify-between mb-5">
+        <div className="w-full p-3 md:p-6 bg-white min-h-screen ">
+            <div className="flex flex-col md:flex-row items-center gap-8 md:gap-0 justify-between mb-5">
                 <div>
                     <h1 className="text-xl font-semibold text-gray-800">Derivatives Module</h1>
                     <p className="text-sm text-gray-500">Manage tradable assets and trading pairs available for spot (instant) trading</p>
                 </div>
                 <button
                     onClick={() => setIsModalOpen(true)}
-                    className="px-4 py-2 bg-blue-600 text-white cursor-pointer rounded-lg">+ New Spot</button>
+                    className="px-4 py-2 w-full md:w-fit bg-blue-600 text-white cursor-pointer rounded-lg">+ New Spot</button>
             </div>
 
-            <div className="flex items-center justify-between mb-5">
-                <button className="border px-4 py-2 rounded-lg">Trading Pairs <span className="ml-2 bg-gray-200 px-2 py-1 rounded">{pairs.length}</span></button>
+            <div className="flex flex-col gap-4 md:gap-0 md:flex-row md:items-center justify-between mb-5">
+                <button className="border w-fit px-4 py-2 rounded-lg">Trading Pairs <span className="ml-2 bg-gray-200 px-2 py-1 rounded">{pairs.length}</span></button>
 
-                <div className="flex items-center space-x-3">
+                <div className="flex flex-col gap-5 md:gap-0 md:flex-row md:items-center space-x-3">
+                    <div className="flex items-center  md:gap-0 space-x-3">   
                     <div className="relative w-72">
                         <input className="w-full border rounded-lg pl-10 py-2 text-sm" placeholder="Search" />
                         <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
@@ -75,6 +76,7 @@ export default function TradingPairsTable() {
                         </span>
                         Filters
                     </button>
+                        </div>
                     <div className="flex items-center gap-2">
                         <button className="flex items-center border rounded-full p-2">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -102,7 +104,7 @@ export default function TradingPairsTable() {
                 <thead className="text-gray-500 text-xs border-b">
                     <tr>
                         <th className="p-3"><input type="checkbox" /></th>
-                        <th className="p-3 text-left ">
+                        <th className="p-3 text-left whitespace-nowrap">
                             <div className="flex items-center gap-1">
                                 Pair
                                 <span>
@@ -113,7 +115,7 @@ export default function TradingPairsTable() {
                                 </span>
                             </div>
                         </th>
-                        <th className="p-3 text-left ">
+                        <th className="p-3 text-left whitespace-nowrap ">
                             <div className="flex items-center gap-1">
                                 Min Order
                                 <span>
@@ -124,7 +126,7 @@ export default function TradingPairsTable() {
                                 </span>
                             </div>
                         </th>
-                        <th className="p-3 text-left ">
+                        <th className="p-3 text-left whitespace-nowrap">
                             <div className="flex items-center gap-1">
                                 Fee Rate
                                 <span>
@@ -135,7 +137,7 @@ export default function TradingPairsTable() {
                                 </span>
                             </div>
                         </th>
-                        <th className="p-3 text-left ">
+                        <th className="p-3 text-left whitespace-nowrap">
                             <div className="flex items-center gap-1">
                                 Expiry Date
                                 <span>
@@ -146,7 +148,7 @@ export default function TradingPairsTable() {
                                 </span>
                             </div>
                         </th>
-                        <th className="p-3 text-left ">
+                        <th className="p-3 text-left whitespace-nowrap">
                             <div className="flex items-center gap-1">
                                 Status
                                 <span>
@@ -157,7 +159,7 @@ export default function TradingPairsTable() {
                             </div>
 
                         </th>
-                        <th className="p-3 text-right  ">
+                        <th className="p-3 text-right whitespace-nowrap ">
                             <div className="flex items-center gap-1">
                                 Actions
                                 <span>
@@ -181,7 +183,7 @@ export default function TradingPairsTable() {
                                     <input type="checkbox" />
                                 </div>
                             </td>
-                            <td className="p-3 font-medium flex items-center gap-2">
+                            <td className="p-3 font-medium flex items-center gap-2 whitespace-nowrap">
                                 <div>
                                     {pair.symbol === "ADA/NGN" ? (
                                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -231,11 +233,11 @@ export default function TradingPairsTable() {
                                     <div className="text-gray-500 text-xs">{pair.symbol}</div>
                                 </div>
                             </td>
-                            <td className="p-3">{pair.minOrder}</td>
-                            <td className="p-3">{pair.feeRate}</td>
-                            <td className="p-3">{pair.expiry}</td>
-                            <td className="p-3"><span className={`px-2 py-1 rounded text-xs ${pair.status === "Active" ? "bg-green-100 text-green-600" : pair.status === "Paused" ? "bg-yellow-100 text-yellow-600" : "bg-blue-100 text-blue-600"}`}>{pair.status}</span></td>
-                            <td className="p-3 flex justify-end space-x-3">
+                            <td className="p-3 whitespace-nowrap">{pair.minOrder}</td>
+                            <td className="p-3 whitespace-nowrap">{pair.feeRate}</td>
+                            <td className="p-3 whitespace-nowrap">{pair.expiry}</td>
+                            <td className="p-3 whitespace-nowrap"><span className={`px-2 py-1 rounded text-xs ${pair.status === "Active" ? "bg-green-100 text-green-600" : pair.status === "Paused" ? "bg-yellow-100 text-yellow-600" : "bg-blue-100 text-blue-600"}`}>{pair.status}</span></td>
+                            <td className="p-3 flex justify-end whitespace-nowrap space-x-3">
                                 <button><Edit className="h-4 w-4 text-gray-500" /></button>
                                 <button onClick={() => deletePair(pair.id)}><Trash2 className="h-4 w-4 text-red-500" /></button>
                                 <button><MoreVertical className="h-4 w-4 text-gray-500" /></button>

@@ -65,7 +65,7 @@ export const ListingsFutures: React.FC = () => {
         <div className="w-full">
 
 
-            <div className="bg-white  rounded-lg p-4">
+            <div className="bg-white  rounded-lg md:p-4">
                 <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-4">
                     <div className="flex items-center gap-3">
                         <button className="px-3 py-1 rounded-md bg-blue-50 text-blue-700 text-sm font-medium">Futures <span className="ml-2 inline-block bg-gray-100 text-gray-600 rounded-full px-2 py-0.5 text-xs">1881</span></button>
@@ -95,24 +95,24 @@ export const ListingsFutures: React.FC = () => {
                 </div>
 
                 <div className="overflow-x-auto">
-                    <table className="min-w-full text-sm">
+                    <table className="min-w-full text-sm table-fixed">
                         <thead>
                             <tr className="text-left text-xs text-gray-500 border-y border-gray-100">
-                                <th className="py-3 px-3 w-10"><input type="checkbox" /></th>
-                                <th className="py-3 px-3">Asset Name</th>
-                                <th className="py-3 px-3">Pair</th>
-                                <th className="py-3 px-3">Leverage</th>
-                                <th className="py-3 px-3">Funding Rate</th>
-                                <th className="py-3 px-3">Expiry Date</th>
-                                <th className="py-3 px-3">Status</th>
-                                <th className="py-3 px-3 w-36">&nbsp;</th>
+                                <th className="py-3 px-3 w-10 whitespace-nowrap"><input type="checkbox" /></th>
+                                <th className="py-3 px-3 whitespace-nowrap">Asset Name</th>
+                                <th className="py-3 px-3 whitespace-nowrap">Pair</th>
+                                <th className="py-3 px-3 whitespace-nowrap">Leverage</th>
+                                <th className="py-3 px-3 whitespace-nowrap">Funding Rate</th>
+                                <th className="py-3 px-3 whitespace-nowrap">Expiry Date</th>
+                                <th className="py-3 px-3 whitespace-nowrap">Status</th>
+                                <th className="py-3 px-3 whitespace-nowrap w-36">&nbsp;</th>
                             </tr>
                         </thead>
                         <tbody>
                             {filtered.map((row) => (
                                 <tr key={row.id} className="border-b border-gray-100 hover:bg-gray-50">
-                                    <td className="py-4 px-3"><input checked={!!selected[row.id]} onChange={() => toggleSelect(row.id)} type="checkbox" /></td>
-                                    <td className="py-4 px-3">
+                                    <td className="py-4  whitespace-nowrap px-3"><input checked={!!selected[row.id]} onChange={() => toggleSelect(row.id)} type="checkbox" /></td>
+                                    <td className="py-4  whitespace-nowrap px-3">
                                         <div className="flex items-center gap-3">
                                             <div className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center text-xs font-medium text-gray-600">
 
@@ -122,19 +122,19 @@ export const ListingsFutures: React.FC = () => {
                                                 </svg>
 
                                             </div>
-                                            <div className="font-medium">{row.name}</div>
+                                            <div className="font-medium whitespace-nowrap">{row.name}</div>
                                         </div>
                                     </td>
-                                    <td className="py-4 px-3"><span className="inline-flex items-center text-xs px-2 py-1 rounded-full bg-violet-50 text-violet-700">{row.pair}</span></td>
-                                    <td className="py-4 px-3">{row.leverage}</td>
-                                    <td className="py-4 px-3">{row.fundingRate ?? "N/A"}</td>
-                                    <td className="py-4 px-3">{row.expiry ?? "N/A"}</td>
-                                    <td className="py-4 px-3">
+                                    <td className="py-4 whitespace-nowrap px-3"><span className="inline-flex items-center text-xs px-2 py-1 rounded-full bg-violet-50 text-violet-700">{row.pair}</span></td>
+                                    <td className="py-4 whitespace-nowrap px-3">{row.leverage}</td>
+                                    <td className="py-4 whitespace-nowrap px-3">{row.fundingRate ?? "N/A"}</td>
+                                    <td className="py-4 whitespace-nowrap px-3">{row.expiry ?? "N/A"}</td>
+                                    <td className="py-4 whitespace-nowrap px-3">
                                         <span className={`inline-flex items-center px-2 py-1 text-xs rounded-full ${row.status === "Active" ? "bg-green-50 text-green-700" : row.status === "Paused" ? "bg-amber-50 text-amber-700" : "bg-sky-50 text-sky-700"}`}>
                                             {row.status}
                                         </span>
                                     </td>
-                                    <td className="py-4 px-3 text-right">
+                                    <td className="py-4 px-3 whitespace-nowrap text-right">
                                         <div className="inline-flex items-center gap-3">
                                             <button title="Delist" onClick={() => delist(row.id)} className="p-2 rounded-md hover:bg-gray-100 text-gray-600"><Trash2 className="w-4 h-4" /></button>
                                             <button title="Edit" className="p-2 rounded-md hover:bg-gray-100 text-gray-600"><Edit3 className="w-4 h-4" /></button>

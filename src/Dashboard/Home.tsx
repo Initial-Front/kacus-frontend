@@ -42,7 +42,7 @@ const stackedData = [
 
 export default function Home() {
     return (
-        <div className="w-full min-h-screen bg-white p-6 space-y-6">
+        <div className="w-full min-h-screen bg-white p-3 md:p-6 space-y-6">
        
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
                 <div>
@@ -73,9 +73,9 @@ export default function Home() {
                 </div>
             </div>
    
-            <div className="flex flex-wrap  items-center  w-full justify-between">
+            <div className="flex flex-wrap gap-3 md:gap-0  items-center  w-full justify-between">
 
-                <div className="border rounded-md border-gray-300 ">
+                <div className=" md:border rounded-md border-gray-300 ">
                     {[
                         "12 months",
                         "30 days",
@@ -94,13 +94,12 @@ export default function Home() {
 
                 <Button
                     variant="outline"
-                    className="flex items-center gap-2 border-gray-300 mx-3 text-gray-700 ml-auto"
+                    className="flex items-center gap-2 border-gray-300 mt-7 md:mt-0 mx-3 text-gray-700 md:ml-auto"
                 >
                     <Calendar className="w-4 h-4" /> Select dates
                 </Button>
 
-                <Button variant="outline" className="border-gray-300 text-gray-700 flex items-center gap-3">
-
+                <Button variant="outline" className="border-gray-300 mt-7 md:mt-0 text-gray-700 flex items-center justify-center gap-3">
                     <span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5 10H15M2.5 5H17.5M7.5 15H12.5" stroke="#414651" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
@@ -208,8 +207,8 @@ export default function Home() {
                 ))}
             </div>
 
-            <div className="p-6 bg-white rounded-lg shadow-sm border border-gray-100">
-                <h3 className="text-lg font-medium mb-4 flex items-center gap-3"
+            <div className="p-1 md:p-6 bg-white rounded-lg md:shadow-sm md:border border-gray-100">
+                <h3 className=" text-sm md:text-lg font-medium mb-4 flex items-center gap-3"
                 >User Growth Chart
                     <span>
                         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -235,8 +234,8 @@ export default function Home() {
 
             <div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
                 {/* Left */}
-                <div className="p-6 bg-white rounded-lg shadow-sm border border-gray-100">
-                    <h3 className="text-lg font-medium mb-4">Trade Volume by Product</h3>
+                <div className="p-1 md:p-6 bg-white rounded-lg md:shadow-sm md:border border-gray-100">
+                    <h3 className="text-sm md:text-lg font-medium mb-4">Trade Volume by Product</h3>
                     <div className="w-full h-64">
                         <ResponsiveContainer width="100%" height="100%">
                             <LineChart data={tradeVolume}>
@@ -251,8 +250,8 @@ export default function Home() {
                 </div>
 
                 {/* Right */}
-                <div className="p-6 bg-white rounded-lg shadow-sm border border-gray-100">
-                    <h3 className="text-lg font-medium mb-4">Trade Volume by Product</h3>
+                <div className="p-1 md:p-6 bg-white rounded-lg  md:shadow-sm md:border  border-gray-100">
+                    <h3 className="text-sm md:text-lg font-medium mb-4">Trade Volume by Product</h3>
                     <div className="w-full h-64">
                         <ResponsiveContainer width="100%" height="100%">
                             <BarChart data={stackedData}>

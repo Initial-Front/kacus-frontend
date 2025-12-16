@@ -63,7 +63,7 @@ const ListingsSpot: React.FC = () => {
         <div className="w-full">
 
 
-            <div className="bg-white rounded-lg p-4">
+            <div className="bg-white rounded-lg md:p-4">
                 <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-4">
                     <div className="flex items-center gap-3">
                         <button className="px-3 py-1 rounded-md bg-blue-50 text-blue-700 text-sm font-medium">Spot <span className="ml-2 inline-block bg-gray-100 text-gray-600 rounded-full px-2 py-0.5 text-xs">1881</span></button>

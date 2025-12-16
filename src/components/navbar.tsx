@@ -542,15 +542,7 @@ export default function Sidebar({ toggleSideBar, setToggleSideBar }: sideBarProp
                 <div className="flex items-center gap-2  justify-between">
 
 
-                    <svg width="133" height="40" viewBox="0 0 133 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
-                        <rect width="132.285" height="40" fill="url(#pattern0_3948_20571)" />
-                        <defs>
-                            <pattern id="pattern0_3948_20571" patternContentUnits="objectBoundingBox" width="1" height="1">
-                                <use xlinkHref="#image0_3948_20571" transform="scale(0.000448632 0.00148368)" />
-                            </pattern>
-                            <image id="image0_3948_20571" width="2229" height="674" />
-                        </defs>
-                    </svg>
+                   <img src="/Kaucus1 LOGO.png" alt="logo"/>
 
                     <button
                         onClick={() => setToggleSideBar(false)}
