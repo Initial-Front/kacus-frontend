@@ -99,26 +99,26 @@ const MOCK: UserRow[] = [
 
 
 
-function Avatar({ name, src }: { name: string; src?: string | null }) {
-    const initials = name
-        .split(" ")
-        .map((s) => s[0])
-        .slice(0, 2)
-        .join("")
-        .toUpperCase();
-    return src ? (
+// function Avatar({ name, src }: { name: string; src?: string | null }) {
+//     const initials = name
+//         .split(" ")
+//         .map((s) => s[0])
+//         .slice(0, 2)
+//         .join("")
+//         .toUpperCase();
+//     return src ? (
 
-        <img
-            src={src}
-            alt={name}
-            className="w-9 h-9 rounded-full object-cover"
-        />
-    ) : (
-        <div className="w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center text-sm text-slate-700">
-            {initials}
-        </div>
-    );
-}
+//         <img
+//             src={src}
+//             alt={name}
+//             className="w-9 h-9 rounded-full object-cover"
+//         />
+//     ) : (
+//         <div className="w-9 h-9 rounded-full bg-slate-100 flex items-center justify-center text-sm text-slate-700">
+//             {initials}
+//         </div>
+//     );
+// }
 
 function StatusBadge({ status }: { status: KycStatus | AccountStatus }) {
     const map: Record<string, string> = {
@@ -517,7 +517,7 @@ export default function FlaggedUsersTable() {
                 </div>
 
 
-                <div className="px-6 py-3 border-t flex flex-col md:flex-row items-center justify-between gap-3">
+                <div className="px-6 py-3 border-t flex flex-row items-center justify-between gap-3">
                     <button
                         onClick={() => setPage((p) => Math.max(1, p - 1))}
                         disabled={page === 1}
@@ -569,39 +569,7 @@ export default function FlaggedUsersTable() {
             </div>
 
 
-            <div className="mt-4 sm:hidden">
-                <div className="space-y-3">
-                    {pageData.map((row) => (
-                        <div key={"mobile-" + row.id} className="bg-white border rounded-lg p-3">
-                            <div className="flex items-center justify-between">
-                                <div className="flex items-center gap-3">
-                                    <Avatar name={row.name} />
-                                    <div>
-                                        <div className="text-sm font-medium">{row.name}</div>
-                                        <div className="text-xs text-slate-500">{row.email}</div>
-                                    </div>
-                                </div>
-                                <ActionsMenu onView={() => alert(`View ${row.name}`)} />
-                            </div>
-
-                            <div className="mt-3 grid grid-cols-2 gap-2 text-xs text-slate-600">
-                                <div>
-                                    <div className="font-medium">KYC</div>
-                                    <StatusBadge status={row.kyc} />
-                                </div>
-                                <div>
-                                    <div className="font-medium">Balance</div>
-                                    <div className="mt-1">{row.WalletBalance}</div>
-                                </div>
-                                <div>
-                                    <div className="font-medium">Last Login</div>
-                                    <div className="mt-1">{row.LastTransaction}</div>
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
+     
         </div>
     );
 }

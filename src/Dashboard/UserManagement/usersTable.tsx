@@ -460,13 +460,13 @@ export default function UsersTable() {
                 </div>
 
 
-                <div className="px-6 py-3 border-t flex flex-col md:flex-row items-center justify-between gap-3">
+                <div className="px-6 py-3 border-t flex flex-row items-center justify-between gap-3">
                     <button
                         onClick={() => setPage((p) => Math.max(1, p - 1))}
                         disabled={page === 1}
-                        className="text-base text-[#A4A7AE] border-2 border-[#E9EAEB] rounded-lg flex items-center gap-3 py-[8px] px-3">
+                        className="text-sm md:text-base text-[#A4A7AE] md:border-2 border-[#E9EAEB] rounded-lg flex items-center gap-3 md:py-[8px] md:px-3">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15.8332 9.99984H4.1665M4.1665 9.99984L9.99984 15.8332M4.1665 9.99984L9.99984 4.1665" stroke="#A4A7AE" strokeWidth="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M15.8332 9.99984H4.1665M4.1665 9.99984L9.99984 15.8332M4.1665 9.99984L9.99984 4.1665" stroke="#414651" strokeWidth="1.66667" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
 
                         Previous
@@ -474,7 +474,7 @@ export default function UsersTable() {
 
 
 
-                       <div className="hidden sm:flex items-center gap-2">
+                       <div className="flex items-center gap-2">
                             {Array.from({ length: totalPages }).map((_, i) => {
                                 const idx = i + 1;
                                 const active = idx === page;
@@ -491,17 +491,13 @@ export default function UsersTable() {
                         </div>
 
                     <div className="flex items-center gap-2">
-
-                     
-
-
                         <button
                              onClick={() => setPage((p) => Math.min(totalPages, p + 1))}
                             disabled={page === totalPages}
-                            className="text-base text-[#A4A7AE] border-2 border-[#E9EAEB] rounded-lg flex items-center gap-3 py-[8px] px-3">
+                            className=" text-sm md:text-base text-[#A4A7AE] md:border-2 border-[#E9EAEB] rounded-lg flex items-center gap-3 md:py-[8px] md:px-3">
                                 Next
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4.16699 9.99984H15.8337M15.8337 9.99984L10.0003 4.1665M15.8337 9.99984L10.0003 15.8332" stroke="#414651" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M4.16699 9.99984H15.8337M15.8337 9.99984L10.0003 4.1665M15.8337 9.99984L10.0003 15.8332" stroke="#414651" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
 
 
@@ -512,7 +508,7 @@ export default function UsersTable() {
             </div>
 
 
-            <div className="mt-4 sm:hidden">
+            {/* <div className="mt-4 sm:hidden">
                 <div className="space-y-3">
                     {pageData.map((row) => (
                         <div key={"mobile-" + row.id} className="bg-white border rounded-lg p-3">
@@ -548,7 +544,7 @@ export default function UsersTable() {
                         </div>
                     ))}
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }

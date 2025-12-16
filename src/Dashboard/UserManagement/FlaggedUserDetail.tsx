@@ -130,9 +130,9 @@ export default function FlaggedUserDetailsPage() {
     };
 
     return (
-        <div className="w-full py-[32px] ">
+        <div className="w-full py-4 md:py-[32px] ">
             {/* Header */}
-            <div className="px-[32px] justify-between mb-5">
+            <div className="px-3 md:px-[32px] justify-between mb-5">
                 <div>
                     <h1 className="text-xl font-sans font-bold flex items-center gap-5  text-gray-800">
                         User Management
@@ -160,9 +160,9 @@ export default function FlaggedUserDetailsPage() {
 
 
 
-            <div className="bg-white rounded-xl mx-8 border-2 p-6 mb-6">
-                <div className="flex items-center justify-between ">
-                    <div className="flex items-center gap-4">
+            <div className="bg-white rounded-xl  mx-4 md:mx-8 border-2 p-3 md:p-6 mb-6">
+                <div className="flex flex-col md:flex-row  items-center justify-between ">
+                    <div className="flex flex-col md:flex-row items-center mb-3 md:mb-0 gap-4">
                         <img
                             src="https://i.pravatar.cc/100"
                             className="w-16 h-16 rounded-full object-cover"
@@ -176,7 +176,7 @@ export default function FlaggedUserDetailsPage() {
 
                     <div className="flex gap-3">
                         <Button variant="outline">Suspend User</Button>
-                        <Button variant="outline">UnFlag User</Button>
+                        <Button className="border border-red-600" variant="outline">UnFlag User</Button>
                     </div>
                 </div>
 
@@ -200,7 +200,7 @@ export default function FlaggedUserDetailsPage() {
                 ))}
             </div>
 
-            <main className="px-8">
+            <main className=" px-2 md:px-8">
 
                 {tab === "overview" && (
                     <section>
@@ -251,7 +251,7 @@ export default function FlaggedUserDetailsPage() {
                         <div className="bg-white p-6 rounded-xl border">
                             <h3 className="font-semibold mb-4">Personal Information</h3>
 
-                            <div className="flex items-center w-full">
+                            <div className="flex flex-col md:flex-row md:items-center  w-full">
                                 <div className="flex flex-col gap-5 lg:w-1/2">
                                     <div className="flex flex-col gap-1">
                                         <p className="text-sm text-gray-500">First Name</p>
@@ -411,7 +411,7 @@ export default function FlaggedUserDetailsPage() {
                     <div className="w-full bg-white rounded-xl border-2 divide-y text-[#111827]  mx-auto">
                         {/* Header */}
                         <div className="flex flex-col w-full   justify-between gap-3 ">
-                            <div className="px-6 pt-5">
+                            <div className=" px-2 md:px-6 pt-5">
                                 <h2 className="text-lg font-semibold flex items-center gap-2">
                                     Activity Summary
                                     <span className="text-xs border-2  text-blue-700 px-2 flex items-center gap-3 py-0.5 rounded-lg">
@@ -428,7 +428,7 @@ export default function FlaggedUserDetailsPage() {
                             </div>
 
 
-                            {/* Search + Filters */}
+                      
                             <div className="flex items-center gap-3 w-full justify-end border-t-2  px-[41px] py-[13px] md:w-auto">
                                 <div className="flex gap-3 items-center w-full md:w-80  h-[44px] pl-3 pr-3 rounded-lg border border-gray-200">
 
