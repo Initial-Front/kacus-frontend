@@ -39,11 +39,11 @@ const ListingFuturesModal: React.FC<Props> = ({ onClose }) => {
   };
 
   return (
-    <div className="bg-white w-full max-w-[650px] rounded-xl shadow-xl px-3 md:px-6  relative">
+    <div className="bg-white w-full max-w-[650px] p-3 rounded-xl shadow-xl px-3 md:px-6  relative">
 
       <button
         onClick={onClose}
-        className="absolute right-4 top-4 text-gray-500 hover:text-black"
+        className="absolute right-4 top-2 md:top-4 text-gray-500 hover:text-black"
       >
         ✕
       </button>
@@ -243,7 +243,7 @@ const ListingFuturesModal: React.FC<Props> = ({ onClose }) => {
         </div>
       )}
 
-      {/* FOOTER BUTTONS */}
+  
       <div className="flex w-full gap-4 mt-8 border-t pt-4">
         <button
           onClick={onClose}
