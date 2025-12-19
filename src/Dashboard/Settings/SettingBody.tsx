@@ -1,5 +1,7 @@
 import { useRef, useState, type ReactNode } from "react";
 import { Switch } from "@/components/ui/switch";
+import RoleManagement from "./RoleManageMent";
+import WithdrawalLimits from "./withdrawLimit";
 
 const tabs = ["My Profile", "Notifications", "Role Management", "Withdrawal Limits"];
 
@@ -7,10 +9,10 @@ export default function SettingsPage() {
   const [activeTab, setActiveTab] = useState("My Profile");
 
   return (
-    <div className="w-full min-h-screen bg-white  lg:px-8 py-6">
+    <div className="w-full min-h-screen bg-white  ">
       {/* Tabs */}
       <div className="border-b border-gray-200 overflow-x-auto no-scrollbar">
-        <nav className="flex gap-6 text-sm font-medium whitespace-nowrap">
+        <nav className="flex gap-6 px-2 md:px-6 text-sm font-medium whitespace-nowrap">
           {tabs.map((tab) => (
             <button
               key={tab}
@@ -31,13 +33,15 @@ export default function SettingsPage() {
       </div>
 
       {/* Content */}
-      <div className="mt-8">
+      <div className="mt-8 lg:px-8 py-6">
         {activeTab === "My Profile" && <ProfileTab />}
         {activeTab === "Notifications" && <NotificationsTab />}
+         {activeTab === "Role Management" && <RoleManagement/>}
+         {activeTab === "Withdrawal Limits" && <WithdrawalLimits/>}
       </div>
 
-      {/* Save button */}
-      <div className="flex justify-end mt-6">
+     
+      <div className="flex justify-end mt-6 my-4 px-6">
         <button className="w-full sm:w-auto px-6 py-3 text-base rounded-lg bg-blue-600 text-white">
           Save Changes
         </button>
@@ -132,7 +136,7 @@ function ProfileTab() {
 function NotificationsTab() {
   return (
     <div className="max-w-3xl space-y-6">
-      <div>
+      <div className=" px-3 md:p-0">
         <h2 className="text-base font-semibold text-gray-900">Notifications</h2>
         <p className="text-sm text-gray-500">
           We may still send important notifications about your account.
@@ -171,13 +175,13 @@ function Field({
 
 function ToggleRow({ title, desc }: { title: string; desc: string }) {
   return (
-    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 border-t pt-4">
+    <div className="flex flex-col sm:flex-row items-center justify-between gap-4 px-3 md:p-0 border-t  py-4">
       <div>
         <p className="text-sm font-medium text-gray-900">{title}</p>
         <p className="text-sm text-gray-500">{desc}</p>
       </div>
 
-      <div className="flex gap-6">
+      <div className="flex flex-col gap-6 ">
         <div className="flex items-center gap-2">
           <Switch />
           <span className="text-sm text-gray-700">Email</span>

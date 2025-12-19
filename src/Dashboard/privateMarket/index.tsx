@@ -8,9 +8,9 @@ export default function PrivateMarket() {
     const navigate = useNavigate();
 
     return (
-        <div className="w-full p-6 bg-white min-h-screen">
+        <div className="w-full p-3 md:p-6 bg-white min-h-screen">
    
-            <div className="flex items-center justify-between mb-6">
+            <div className="flex flex-col md:flex-row gap-4 md:gap-0 md:items-center justify-between mb-6">
                 <div>
                     <h1 className="text-xl font-semibold text-gray-800">Private Market</h1>
                     <p className="text-sm text-gray-500 mt-2">
