@@ -30,9 +30,9 @@ export default function ListingSpotModal({ onClose }: { onClose: () => void }) {
   };
 
   return (
-    <div className="bg-white w-full max-h-[700px] py-3 max-w-[600px] rounded-xl  relative">
+    <div className="bg-white w-full max-h-[600px] md:max-h-[700px] py-3 max-w-[600px] overflow-auto no-scrollbar rounded-xl  relative">
        
-       <div className="px-6 flex justify-between items-center mb-2">
+       <div className="px-3 md:px-6 flex justify-between items-center mb-2">
         <h2 className="text-xl text-[#181D27] font-semibold ">New Spot</h2>
 
         <button
@@ -43,7 +43,7 @@ export default function ListingSpotModal({ onClose }: { onClose: () => void }) {
       </button>
        </div>
       <hr />
-      <div className="flex gap-2 text-sm text-gray-500 my-6 px-6">
+      <div className="flex gap-2 text-sm text-gray-500 my-6 px-3 md:px-6 ">
         <span className={step === "General" ? "text-blue-600 font-medium" : ""}>
           General
         </span>
@@ -60,7 +60,7 @@ export default function ListingSpotModal({ onClose }: { onClose: () => void }) {
       </div>
 
       {step === "General" && (
-        <div className="space-y-4 px-6">
+        <div className="space-y-4 px-3 md:px-6 ">
           <div>
             <label className="text-[#181D27] text-sm">Token Name</label>
             <input
@@ -138,7 +138,7 @@ export default function ListingSpotModal({ onClose }: { onClose: () => void }) {
 
 
       {step === "MarketRules" && (
-        <div className="space-y-4 px-6">
+        <div className="space-y-4 px-3 md:px-6 ">
           <div>
             <label className="text-[#181D27] text-sm">Taker Fee</label>
             <input
@@ -187,7 +187,7 @@ export default function ListingSpotModal({ onClose }: { onClose: () => void }) {
 
 
       {step === "ListingInfo" && (
-        <div className="space-y-6 px-6">
+        <div className="space-y-6 px-3 md:px-6 ">
 
           {/* Listing Date */}
           <div>

@@ -18,15 +18,11 @@ const walletSummary = [
 
 
 function Revenue() {
-
-  
-
-
     return (
-        <section className="px-[32px]">
-            <div className="flex flex-wrap  items-center  w-full justify-between ">
+        <section className="p-3 md:px-[32px]">
+            <div className="flex flex-wrap gap-y-4 md:gap-0 items-center  w-full justify-between ">
 
-                <div className="border rounded-lg border-gray-300 ">
+                <div className="md:border rounded-lg border-gray-300 ">
                     {[
                         "12 months",
                         "30 days",
@@ -61,7 +57,7 @@ function Revenue() {
                 </Button>
             </div>
 
-            {/* CARDS */}
+   
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-[32px]  mx-auto gap-4">
             {[
@@ -92,7 +88,7 @@ function Revenue() {
                 <section className="flex  items-center justify-between mt-4">
                   <div className="flex flex-col">
 
-                    <span className="text-3xl font-semibold mt-1">{card.value}</span>
+                    <span className="text-xl md:text-3xl font-semibold mt-1">{card.value}</span>
                     <span
                       className={`text-sm mt-2 ${card.positive ? "text-green-600" : "text-red-600"
                         }`}
@@ -188,9 +184,9 @@ function Revenue() {
 
 
 
-            <div className="border border-[#E9EAEB] rounded-xl my-6 ">
+            <div className="md:border border-[#E9EAEB] md:rounded-xl my-12 md:my-6 ">
                 <div className="lg:col-span-2 bg-white rounded-xl  divide-y ">
-                    <div className="p-[24px]">
+                    <div className="md:p-[24px]">
                   <h1 className="text-lg text-[#181D27] font-medium ">Wallet Summary Table</h1>
                     <p className="text-sm text-[#535862] ">
                         Snapshot of platform-held balances across fiat and crypto wallets, segregated by type and provider.
@@ -202,24 +198,24 @@ function Revenue() {
                         <table className="w-full text-sm ">
                             <thead className="p-3">
                                 <tr className="text-xs text-gray-500  bg-[#FDFDFD]">
-                                    <th className="py-3 text-left">Segment Label</th>
-                                    <th className="py-3 text-left">Asset</th>
-                                    <th className="py-3 text-left">Amount Held</th>
-                                    <th className="py-3 text-left">Inflow</th>
-                                    <th className="py-3 text-left">Outflow</th>
+                                    <th className="py-3 text-left whitespace-nowrap">Segment Label</th>
+                                    <th className="py-3 text-left whitespace-nowrap">Asset</th>
+                                    <th className="py-3 text-left whitespace-nowrap">Amount Held</th>
+                                    <th className="py-3 text-left whitespace-nowrap">Inflow</th>
+                                    <th className="py-3 text-left whitespace-nowrap">Outflow</th>
                                 </tr>
                             </thead>
 
                             <tbody>
                                 {walletSummary.map((w, i) => (
-                                    <tr key={i} className="border-b last:border-b-0 p-[20px]">
-                                        <td className="py-3">{w.label}</td>
-                                        <td className="py-3">
+                                    <tr key={i} className="border-b whitespace-nowrap  last:border-b-0 p-[20px]">
+                                        <td className="py-3 whitespace-nowrap">{w.label}</td>
+                                        <td className="py-3 whitespace-nowrap">
                                             <span className="px-2 py-1 text-xs bg-gray-100 rounded">{w.asset}</span>
                                         </td>
-                                        <td className="py-3">{w.amount}</td>
-                                        <td className="py-3">{w.inflow}</td>
-                                        <td className="py-3">{w.outflow}</td>
+                                        <td className="py-3 whitespace-nowrap">{w.amount}</td>
+                                        <td className="py-3 whitespace-nowrap">{w.inflow}</td>
+                                        <td className="py-3 whitespace-nowrap">{w.outflow}</td>
                                     </tr>
                                 ))}
                             </tbody>

@@ -44,20 +44,20 @@ function ApiDev() {
     }
     return (
         <section>
-            <div className="w-full p-6 bg-white min-h-screen ">
-                <div className="flex items-center justify-between mb-5">
+            <div className="w-full p-3 md:p-6 bg-white min-h-screen ">
+                <div className="flex flex-col md:flex-row items-center justify-between mb-5">
                     <div>
                         <h1 className="text-xl font-semibold text-gray-800">API & Developer</h1>
                         <p className="text-sm text-[#535862] mt-[10px] ">Manage API keys, usage logs, permissions, and integration tools for institutional traders, partners, and internal services.</p>
                     </div>
                     <button
                         onClick={() => setIsModalOpen(true)}
-                        className="px-4 py-2 bg-blue-600 text-white cursor-pointer rounded-lg">+ Create API Key</button>
+                        className="px-4 py-2 w-fit mt-3 md:mt-0 bg-blue-600 text-white cursor-pointer rounded-lg">+ Create API Key</button>
                 </div>
 
 
-                <main className="mt-8  border rounded-2xl ">
-                    <div className="px-[24px] py-[21px] border-b">
+                <main className="mt-8  md:border rounded-2xl ">
+                    <div className="md:px-[24px] py-[21px] border-b">
                         <div className="flex items-center gap-2">
                             <h1 className="text-[#181D27] text-lg font-semibold">Secret API Keys</h1>
                             <button className="flex items-center gap-1 border rounded-lg px-2">
@@ -81,7 +81,7 @@ function ApiDev() {
                         <table className="min-w-full text-sm">
                             <thead>
                                 <tr className="text-left text-xs text-gray-500 border-y bg-[#FDFDFD] border-gray-100">
-                                    <th className="py-3 px-3">
+                                    <th className="py-3  whitespace-nowrap px-3">
                                         <div className="flex items-center gap-1 text-[#717680]">
                                             Client Name
                                             <span>
@@ -92,8 +92,8 @@ function ApiDev() {
                                             </span>
                                         </div>
                                     </th>
-                                    <th className="py-3 px-3 text-[#717680]">Key ID</th>
-                                    <th className="py-3 px-3">
+                                    <th className="py-3 whitespace-nowrap px-3 text-[#717680]">Key ID</th>
+                                    <th className="py-3 whitespace-nowrap px-3">
                                         <div className="flex items-center gap-1 text-[#717680] ">
                                             Created On
                                             <span>
@@ -103,7 +103,7 @@ function ApiDev() {
                                             </span>
                                         </div>
                                     </th>
-                                    <th className="py-3 px-3">
+                                    <th className="py-3  whitespace-nowrap px-3">
                                         <div className="flex items-center gap-1 text-[#717680]">
                                             Status
                                             <span>
@@ -114,7 +114,7 @@ function ApiDev() {
                                         </div>
                                     </th>
 
-                                    <th className="py-3 px-3 w-36">
+                                    <th className="py-3 whitespace-nowrap px-3 w-36">
                                         <div className="flex items-center gap-1 text-[#717680]">
                                             Action
                                             <span>
@@ -130,12 +130,12 @@ function ApiDev() {
                             <tbody>
                                 {ApiData.map((row) => (
                                     <tr key={row.id} className="border-b border-gray-100 ">
-                                        <td className="py-4 px-3">
+                                        <td className="py-4 whitespace-nowrap px-3">
                                             <div className="flex items-center gap-3">
                                                 <div className="font-medium">{row.ClientName}</div>
                                             </div>
                                         </td>
-                                        <td className="py-4 px-3">
+                                        <td className="py-4 px-3 whitespace-nowrap">
                                             <div className="flex items-center justify-center gap-2 px-3 py-1 w-fit rounded-xl bg-[#EEF4FF] text-[#3538CD]">
                                                 <span>
                                                     <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -160,8 +160,8 @@ function ApiDev() {
                                                 </button>
                                             </div>
                                         </td>
-                                        <td className="py-4 px-3">{row.CreatedOn}</td>
-                                        <td className="py-4 px-3">
+                                        <td className="py-4 px-3 whitespace-nowrap">{row.CreatedOn}</td>
+                                        <td className="py-4 px-3 whitespace-nowrap">
                                             <div className={`flex items-center justify-center gap-2 px-2 py-1 text-xs rounded-lg border w-fit `}>
                                                 <span>
                                                     <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -172,7 +172,7 @@ function ApiDev() {
                                                 {row.status}
                                             </div>
                                         </td>
-                                        <td className="py-4 px-3 ">
+                                        <td className="py-4 px-3 whitespace-nowrap ">
                                             <div className="inline-flex items-center gap-3">
                                                 <button title="Delist"
                                                 onClick={()=> setDeleteApi(row.id)}

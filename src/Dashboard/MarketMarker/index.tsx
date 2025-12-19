@@ -44,15 +44,15 @@ function MarketMarker() {
 
     return (
         <section>
-            <div className="w-full p-6 bg-white min-h-screen ">
-                <div className="flex items-center justify-between mb-5">
+            <div className="w-full p-3 md:p-6 bg-white min-h-screen ">
+                <div className="flex flex-col md:flex-row gap-y-4 md:gap-0 items-center justify-between mb-5">
                     <div>
                         <h1 className="text-xl font-semibold text-gray-800">Market Maker & Institutions</h1>
                         <p className="text-sm text-[#535862] mt-[10px] ">Manage all API keys for Market Maker & Institutions</p>
                     </div>
                     <button
                         onClick={() => setIsModalOpen(true)}
-                        className="px-4 py-2 bg-blue-600 text-white cursor-pointer rounded-lg">+ Add Market Maker</button>
+                        className="px-4 py-2 w-fit bg-blue-600 text-white cursor-pointer rounded-lg">+ Add Market Maker</button>
                 </div>
       
 
@@ -76,8 +76,8 @@ function MarketMarker() {
                         </div>
 
                 {mainTab === "Market Maker" ? (
-                    <main className="mt-8  border rounded-2xl ">
-                        <div className="px-[24px] py-[21px] border-b">
+                    <main className="mt-8  md:border rounded-2xl ">
+                        <div className="md:px-[24px] py-[21px] border-b">
                             <div className="flex items-center gap-2">
                                 <h1 className="text-[#181D27] text-lg font-semibold">Market Maker</h1>
                                 <button className="flex items-center gap-1 border rounded-lg px-2">
@@ -101,7 +101,7 @@ function MarketMarker() {
                             <table className="min-w-full text-sm">
                                 <thead>
                                     <tr className="text-left text-xs text-gray-500 border-y bg-[#FDFDFD] border-gray-100">
-                                        <th className="py-3 px-3">
+                                        <th className="py-3 px-3 whitespace-nowrap">
                                             <div className="flex items-center gap-1 text-[#717680]">
                                                Name
                                                 <span>
@@ -112,8 +112,8 @@ function MarketMarker() {
                                                 </span>
                                             </div>
                                         </th>
-                                        <th className="py-3 px-3 text-[#717680]">Pairs Supported</th>
-                                        <th className="py-3 px-3">
+                                        <th className="py-3 px-3 whitespace-nowrap text-[#717680]">Pairs Supported</th>
+                                        <th className="py-3 px-3 whitespace-nowrap">
                                             <div className="flex items-center gap-1 text-[#717680] ">
                                                 Spread Tolerance
                                                 <span>
@@ -123,7 +123,7 @@ function MarketMarker() {
                                                 </span>
                                             </div>
                                         </th>
-                                        <th className="py-3 px-3">
+                                        <th className="py-3 px-3 whitespace-nowrap">
                                             <div className="flex items-center gap-1 text-[#717680]">
                                                  Status
                                                 <span>
@@ -134,7 +134,7 @@ function MarketMarker() {
                                             </div>
                                         </th>
 
-                                        <th className="py-3 px-3 w-36">
+                                        <th className="py-3 px-3 w-36 whitespace-nowrap">
                                             <div className="flex items-center gap-1 text-[#717680]">
                                                 Action
                                                 <span>
@@ -150,20 +150,20 @@ function MarketMarker() {
                                 <tbody>
                                     {ApiData.map((row) => (
                                         <tr key={row.id} className="border-b border-gray-100 ">
-                                            <td className="py-4 px-3">
+                                            <td className="py-4 px-3 whitespace-nowrap">
                                                 <div className="flex items-center gap-3">
                                                     <div className="font-medium">{row.ClientName}</div>
                                                 </div>
                                             </td>
-                                            <td className="py-4 px-3">
+                                            <td className="py-4 px-3 whitespace-nowrap">
                                                 <div className=" w-fit">
 
                                                     {row.KeyId}
                                              
                                                 </div>
                                             </td>
-                                            <td className="py-4 px-3">{row.CreatedOn}</td>
-                                            <td className="py-4 px-3">
+                                            <td className="py-4 px-3 whitespace-nowrap">{row.CreatedOn}</td>
+                                            <td className="py-4 px-3 whitespace-nowrap">
                                                 <div className={`flex items-center justify-center gap-2 px-2 py-1 text-xs rounded-lg border w-fit `}>
                                                     <span>
                                                         <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -174,7 +174,7 @@ function MarketMarker() {
                                                     {row.status}
                                                 </div>
                                             </td>
-                                            <td className="py-4 px-3 ">
+                                            <td className="py-4 px-3 whitespace-nowrap ">
                                                 <div className="inline-flex items-center gap-3">
                                                     <button title="Delist"
                                                         onClick={() => setDeleteApi(row.id)}
@@ -189,8 +189,8 @@ function MarketMarker() {
                         </div>
                     </main>
                 ) : (
-                    <main className="mt-8  border rounded-2xl ">
-                        <div className="px-[24px] py-[21px] border-b">
+                    <main className="mt-8  md:border md:rounded-2xl ">
+                        <div className=" md:px-[24px] py-[21px] border-b">
                             <div className="flex items-center gap-2">
                                 <h1 className="text-[#181D27] text-lg font-semibold">Institutions</h1>
                                 <button className="flex items-center gap-1 border rounded-lg px-2">
@@ -214,7 +214,7 @@ function MarketMarker() {
                             <table className="min-w-full text-sm">
                                 <thead>
                                     <tr className="text-left text-xs text-gray-500 border-y bg-[#FDFDFD] border-gray-100">
-                                        <th className="py-3 px-3">
+                                        <th className="py-3 px-3 whitespace-nowrap">
                                             <div className="flex items-center gap-1 text-[#717680]">
                                                Institution Name
                                                 <span>
@@ -225,8 +225,8 @@ function MarketMarker() {
                                                 </span>
                                             </div>
                                         </th>
-                                        <th className="py-3 px-3 text-[#717680]"> Type</th>
-                                        <th className="py-3 px-3">
+                                        <th className="py-3 px-3 whitespace-nowrap text-[#717680]"> Type</th>
+                                        <th className="py-3 px-3 whitespace-nowrap">
                                             <div className="flex items-center gap-1 text-[#717680] ">
                                                 Country
                                                 <span>
@@ -236,8 +236,8 @@ function MarketMarker() {
                                                 </span>
                                             </div>
                                         </th>
-                                        <th className="py-3 px-3 text-[#717680]">  Connected Services</th>
-                                        <th className="py-3 px-3">
+                                        <th className="py-3 px-3 text-[#717680] whitespace-nowrap">  Connected Services</th>
+                                        <th className="py-3 px-3 whitespace-nowrap">
                                             <div className="flex items-center gap-1 text-[#717680]">
                                                 Status
                                                 <span>
@@ -248,7 +248,7 @@ function MarketMarker() {
                                             </div>
                                         </th>
 
-                                        <th className="py-3 px-3 w-36">
+                                        <th className="py-3 px-3 w-36 whitespace-nowrap">
                                             <div className="flex items-center gap-1 text-[#717680]">
                                                 Action
                                                 <span>
@@ -264,12 +264,12 @@ function MarketMarker() {
                                 <tbody>
                                     {InstitutionData.map((row) => (
                                         <tr key={row.id} className="border-b border-gray-100 ">
-                                            <td className="py-4 px-3">
+                                            <td className="py-4 px-3 whitespace-nowrap">
                                                 <div className="flex items-center gap-3">
                                                     <div className="font-medium">{row.ClientName}</div>
                                                 </div>
                                             </td>
-                                            <td className="py-4 px-3">
+                                            <td className="py-4 px-3 whitespace-nowrap">
                                                 <div className="w-fit ">
                  
                                                     {row.KeyId}
@@ -277,9 +277,9 @@ function MarketMarker() {
                                                 </div>
                                             </td>
                                             
-                                            <td className="py-4 px-3">{row.CreatedOn}</td>
-                                             <td className="py-4 px-3">{row.ConnectedServices}</td>
-                                            <td className="py-4 px-3">
+                                            <td className="py-4 px-3 whitespace-nowrap">{row.CreatedOn}</td>
+                                             <td className="py-4 px-3 whitespace-nowrap">{row.ConnectedServices}</td>
+                                            <td className="py-4 px-3 whitespace-nowrap">
                                                 <div className={`flex items-center justify-center gap-2 px-2 py-1 text-xs rounded-lg border w-fit `}>
                                                     <span>
                                                         <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -290,7 +290,7 @@ function MarketMarker() {
                                                     {row.status}
                                                 </div>
                                             </td>
-                                            <td className="py-4 px-3 ">
+                                            <td className="py-4 px-3 whitespace-nowrap ">
                                                 <div className="inline-flex items-center gap-3">
                                                     <button title="Delist"
                                                         onClick={() => setDeleteApi(row.id)}

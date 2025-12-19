@@ -39,9 +39,8 @@ const ListingFuturesModal: React.FC<Props> = ({ onClose }) => {
   };
 
   return (
-    <div className="bg-white w-full max-w-[650px] rounded-xl shadow-xl p-6 relative">
+    <div className="bg-white w-full max-w-[650px] rounded-xl shadow-xl px-3 md:px-6  relative">
 
-      {/* Close Button */}
       <button
         onClick={onClose}
         className="absolute right-4 top-4 text-gray-500 hover:text-black"
@@ -49,10 +48,10 @@ const ListingFuturesModal: React.FC<Props> = ({ onClose }) => {
         ✕
       </button>
 
-      {/* Title */}
+
       <h2 className="text-xl font-semibold mb-4">New Futures</h2>
 
-      {/* Tabs */}
+  
       <div className="flex items-center gap-4 border-b pb-3 text-sm">
         {["General", "Settlement Rules", "Risk"].map((tab) => (
           <button
@@ -67,7 +66,6 @@ const ListingFuturesModal: React.FC<Props> = ({ onClose }) => {
         ))}
       </div>
 
-      {/* ------------------------ GENERAL TAB ------------------------ */}
       {activeTab === "General" && (
         <div className="space-y-4 mt-6">
           <div>
@@ -146,7 +144,7 @@ const ListingFuturesModal: React.FC<Props> = ({ onClose }) => {
         </div>
       )}
 
-      {/* ------------------------ SETTLEMENT RULES TAB ------------------------ */}
+
       {activeTab === "Settlement Rules" && (
         <div className="space-y-5 mt-6">
           <div>
@@ -196,7 +194,6 @@ const ListingFuturesModal: React.FC<Props> = ({ onClose }) => {
         </div>
       )}
 
-      {/* ------------------------ RISK TAB ------------------------ */}
       {activeTab === "Risk" && (
         <div className="space-y-5 mt-6">
           <div>

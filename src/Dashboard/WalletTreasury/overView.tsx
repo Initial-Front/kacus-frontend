@@ -13,9 +13,9 @@ function OverView() {
 
     const label = pathLabelMap[location.pathname] || '';
     return (
-        <section className="md:p-7">
+        <section className=" p-3 md:p-7">
 
-            <div className="flex items-center justify-between mb-6">
+            <div className="flex flex-col md:flex-row md:items-center gap-3  justify-between mb-6">
                 <div>
                     <h1 className="text-xl flex items-center gap-1 font-semibold text-gray-800">
                         Wallet & Treasury
@@ -36,7 +36,7 @@ function OverView() {
                 </div>
 
                 <button
-                    className="px-4 py-2 bg-blue-600 text-white rounded-lg flex items-center gap-2 text-sm hover:bg-blue-700 transition"
+                    className="px-4 py-2 w-fit bg-blue-600 text-white rounded-lg flex items-center gap-2 text-sm hover:bg-blue-700 transition"
                 >
 
                     <span>
@@ -88,7 +88,7 @@ function OverView() {
                             <section className="flex  items-center justify-between mt-4">
                                 <div className="flex flex-col">
 
-                                    <span className="text-3xl font-semibold mt-1">{card.value}</span>
+                                    <span className="text-lg md:text-3xl font-semibold mt-1">{card.value}</span>
                                     <span
                                         className={`text-sm mt-2 ${card.positive ? "text-green-600" : "text-red-600"
                                             }`}

@@ -15,7 +15,7 @@ export default function TradingAnalytics() {
 
   return (
     <div className=" min-h-screen">
-      <header className="flex flex-col md:flex-row items-start md:items-center justify-between  p-6 mb-[2px]">
+      <header className="flex flex-col md:flex-row items-start md:items-center justify-between p-2 md:p-6 mb-[2px]">
         <div>
           <h1 className="text-2xl font-semibold text-gray-800">
             Reports & Analytics
@@ -25,7 +25,7 @@ export default function TradingAnalytics() {
           </p>
         </div>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center my-4 md:mt-0 gap-3">
           <Button
             variant="outline"
             className="bg-blue-600 h-[40px] p-3 rounded-lg hover:bg-blue-700 text-white"
@@ -43,7 +43,7 @@ export default function TradingAnalytics() {
       </header>
       <div className="w-full mx-auto">
 
-        {/* NAVIGATION */}
+      
         <div className="flex items-center border-b-2 justify-between mb-6 px-7">
           <nav className="flex gap-6 text-sm text-gray-500">
             {tabs.map((t) => (

@@ -50,23 +50,23 @@ interface CardDataType {
         },
     ]
     return (
-        <section className="min-h-screen p-6 ">
+        <section className="min-h-screen p-3 md:p-6 ">
         <div className="w-full ">
-            <div className="flex items-center justify-between mb-5">
+            <div className="flex flex-col md:flex-row gap-y-4 md:gap-0 items-center justify-between mb-5">
                 <div>
                     <h1 className="text-xl font-semibold text-gray-800">Documents & Content</h1>
                     <p className="text-sm text-gray-500">Manage platform policies, whitepapers, legal disclosures, and investor materials with full version control.</p>
                 </div>
                 <button
                     onClick={() => setIsModalOpen(true)}
-                    className="px-4 py-2 bg-blue-600 text-white cursor-pointer rounded-lg">+ Upload Document</button>
+                    className="px-4 py-2 w-fit bg-blue-600 text-white cursor-pointer rounded-lg">+ Upload Document</button>
             </div>
 
-            <div className="flex items-center justify-between mb-5">
+            <div className="flex flex-col md:flex-row items-center justify-between mb-5">
                 <button className="border px-4 py-2 rounded-lg">Documents<span className="ml-2 bg-gray-200 px-2 py-1 rounded">0</span></button>
 
-                <div className="flex items-center space-x-3">
-                    <div className="relative w-72">
+                <div className="flex items-center mt-4 md:mt-0 space-x-3">
+                    <div className="relative w-[60%] md:w-72">
                         <input className="w-full border rounded-lg pl-10 py-2 text-sm outline-none" placeholder="Search" />
                         <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-400" />
                     </div>

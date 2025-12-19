@@ -35,13 +35,13 @@ const wallets: Wallet[] = [
 
 export default function WalletMonitoring() {
     return (
-        <div className="w-full p-6">
+        <div className="w-full p-3 md:p-6">
 
-            <div className="flex items-center justify-between mb-6">
+            <div className="flex flex-col md:flex-row md:items-center gap-3 md:gap-0 justify-between mb-6">
                 <div>
-                    <h1 className="text-xl flex items-center gap-1 font-semibold text-gray-800">
+                    <h1 className="text-lg md:text-xl flex flex-col md:flex-row md:items-center gap-1 font-semibold text-gray-800">
                         Wallet & Treasury
-                        <span className="ms-4">
+                        <span className="ms-4 hidden md:block">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M6 12L10 8L6 4" stroke="#D5D7DA" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
@@ -58,7 +58,7 @@ export default function WalletMonitoring() {
                 </div>
 
                 <button
-                    className="px-4 py-2 bg-blue-600 text-white rounded-lg flex items-center gap-2 text-sm hover:bg-blue-700 transition"
+                    className="px-4 py-2 w-fit bg-blue-600 text-white rounded-lg flex items-center gap-2 text-sm hover:bg-blue-700 transition"
                 >
 
                     <span>
@@ -115,7 +115,7 @@ export default function WalletMonitoring() {
 
 
                 <div className="flex flex-wrap items-center gap-[44px]">
-                    {/* Sort */}
+                   
                     <button className="inline-flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50">
                         <span>
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -146,7 +146,7 @@ export default function WalletMonitoring() {
                     </button>
 
 
-                    {/* Wallet Range */}
+                
                     <button className="inline-flex min-w-[265px] items-center justify-between gap-3 rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50">
                         <div className="flex justify-center items-center gap-2">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -161,7 +161,6 @@ export default function WalletMonitoring() {
                     </button>
 
 
-                    {/* USD Range */}
                     <button className="inline-flex min-w-[170px] items-center justify-between gap-3 rounded-lg border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50">
                         <div className="flex justify-center items-center gap-2">
                             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -374,8 +373,7 @@ export default function WalletMonitoring() {
 
 
 
-            {/* Mobile Cards */}
-            <div className="md:hidden space-y-3">
+            <div className="md:hidden mt-4 space-y-3">
                 {wallets.map((w, i) => (
                     <div
                         key={i}

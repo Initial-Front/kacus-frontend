@@ -41,10 +41,10 @@ function Trading({tabs} : TabProp) {
 
 
     return (
-          <section className="px-[32px]">
-          <div className="flex flex-wrap  items-center  w-full justify-between ">
+          <section className="p-3 md:px-[32px]">
+          <div className="flex flex-wrap gap-y-4 md:gap-0 items-center  w-full justify-between ">
 
-            <div className="border rounded-lg border-gray-300 ">
+            <div className="md:border rounded-lg border-gray-300 ">
               {[
                 "12 months",
                 "30 days",
@@ -110,7 +110,7 @@ function Trading({tabs} : TabProp) {
                 <section className="flex  items-center justify-between mt-4">
                   <div className="flex flex-col">
 
-                    <span  className="text-3xl font-semibold mt-1">{card.value}</span>
+                    <span  className="text-xl md:text-3xl font-semibold mt-1">{card.value}</span>
                     <span
                       className={`text-sm mt-2 ${card.positive ? "text-green-600" : "text-red-600"
                         }`}

@@ -46,7 +46,7 @@ export default function Message() {
    }
 
     return (
-        <div className="p-6">
+        <div className="md:p-6">
             <div className="flex items-center justify-between mb-6">
                 <div>
                     <h1 className="text-[24px] flex items-center gap-1 font-bold text-gray-800">
