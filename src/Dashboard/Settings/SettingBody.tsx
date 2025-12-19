@@ -33,7 +33,7 @@ export default function SettingsPage() {
       </div>
 
       {/* Content */}
-      <div className="mt-8 lg:px-8 py-6">
+      <div className="mt-8 px-3 lg:px-8 py-6">
         {activeTab === "My Profile" && <ProfileTab />}
         {activeTab === "Notifications" && <NotificationsTab />}
          {activeTab === "Role Management" && <RoleManagement/>}

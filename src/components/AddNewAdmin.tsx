@@ -22,8 +22,8 @@ export default function AddAdminModal({setAddNewAdmin}: {setAddNewAdmin: (open: 
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm p-4">
-      <div className="w-full max-w-xl rounded-xl bg-white p-6 shadow-xl">
-        {/* Header */}
+      <div className="w-full max-w-xl rounded-xl bg-white p-3 md:p-6 shadow-xl">
+   
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-lg font-semibold text-gray-800">Add New Admin</h2>
           <button
@@ -34,9 +34,8 @@ export default function AddAdminModal({setAddNewAdmin}: {setAddNewAdmin: (open: 
           </button>
         </div>
 
-        {/* Form */}
         <div className="space-y-8">
-          {/* First + Last Name */}
+        
           <div className="grid grid-cols-2 gap-4 my-6">
             <div className="flex flex-col">
               <label className="text-sm font-medium text-gray-700 mb-1">First Name</label>
@@ -63,7 +62,7 @@ export default function AddAdminModal({setAddNewAdmin}: {setAddNewAdmin: (open: 
           
           </div>
 
-          {/* Phone Number */}
+   
           <div className="flex flex-col">
             <label className="text-sm font-medium text-gray-700 mb-1">Phone Number</label>
             <input

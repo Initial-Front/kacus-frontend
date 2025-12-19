@@ -5,7 +5,7 @@ export default function Setting() {
 
     return (
         <section>
-            <div className="flex items-center justify-between mb-6  p-2 md:p-6">
+            <div className="flex items-center justify-between mb-6  p-3 md:p-6">
                  <div className="flex items-center justify-between mb-6">
                 <div>
                     <h1 className=" text-base md:text-[24px] flex items-center gap-1 font-bold text-gray-800">

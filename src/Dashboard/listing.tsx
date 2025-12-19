@@ -18,7 +18,7 @@ export default function ListingsPage() {
     <div >
       <div className="max-w-7xl mx-auto ">
 
-            <div className="flex flex-col px-6 py-1 md:flex-row md:items-center md:justify-between gap-4 ">
+            <div className="flex flex-col px-3 md:px-6 py-1 md:flex-row md:items-center md:justify-between gap-4 ">
                 <div>
                   <h2 className="text-2xl my-4 font-semibold">Listings</h2>
                   <p className="text-sm text-gray-500">Manage all pairs listing on the platform</p>

@@ -199,8 +199,8 @@ export default function AdministratorsTable() {
 
 
     return (
-        <div className="p-6 bg-white rounded-lg w-full shadow-sm">
-            {/* Header */}
+        <div className="p-3 md:p-6 bg-white rounded-lg w-full shadow-sm">
+        
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
                 <div>
                     <h2 className="text-2xl font-semibold text-gray-900">Administrators</h2>
@@ -220,7 +220,7 @@ export default function AdministratorsTable() {
 
 
             <div className="flex flex-col md:flex-row md:items-center gap-3 mb-4">
-                <div className="flex items-center gap-2 w-full md:w-1/2">
+                <div className="flex flex-col md:flex-row md:items-center gap-2 w-full md:w-1/2">
                     <div className="relative flex-1">
                         <input
                             value={query}
@@ -250,9 +250,9 @@ export default function AdministratorsTable() {
                 <table className={`w-full text-left no-scrollbar ${pageItems.length === 0 ? 'hidden' : 'table'}`} style={{ borderSpacing: "0 12px" }}>
                     <thead >
                         <tr>
-                            <th className="px-4 py-2 text-xs font-semibold text-gray-500 ">No</th>
-                            <th className="px-4 py-2 text-xs font-semibold text-gray-500 ">Name</th>
-                            <th className="px-4 py-2 text-xs font-semibold text-gray-500">
+                            <th className="px-4 py-2 text-xs  whitespace-nowrap  font-semibold text-gray-500 ">No</th>
+                            <th className="px-4 py-2 text-xs whitespace-nowrap font-semibold text-gray-500 ">Name</th>
+                            <th className="px-4 py-2 text-xs whitespace-nowrap font-semibold text-gray-500">
                                 <div className="flex items-center gap-2">
                                     Created
                                     <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -261,7 +261,7 @@ export default function AdministratorsTable() {
                                 </div>
                             </th>
 
-                            <th className="px-4 py-2 text-xs font-semibold text-gray-500">
+                            <th className="px-4 py-2 whitespace-nowrap text-xs font-semibold text-gray-500">
                                 <div className="flex items-center gap-2">
                                     Last Login
                                     <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -270,7 +270,7 @@ export default function AdministratorsTable() {
                                 </div>
                             </th>
 
-                            <th className="px-4 py-2 text-xs font-semibold text-gray-500">
+                            <th className="px-4 py-2 whitespace-nowrap text-xs font-semibold text-gray-500">
                                 <div className="flex items-center gap-2">
                                     Admin Role
                                     <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -279,7 +279,7 @@ export default function AdministratorsTable() {
                                 </div>
                             </th>
 
-                            <th className="px-4 py-2 text-xs font-semibold text-gray-500">
+                            <th className="px-4 py-2 whitespace-nowrap text-xs font-semibold text-gray-500">
                                 <div className="flex items-center gap-2">
                                     Action
                                     <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -300,9 +300,9 @@ export default function AdministratorsTable() {
                                 className="bg-white hover:shadow-sm transition-shadow cursor-pointer"
                                 style={{ boxShadow: "0 0 0 1px rgba(0,0,0,0.03)" }}
                             >
-                                <td className="px-4 py-4 align-middle text-sm text-gray-500 w-12">{(page - 1) * perPage + idx + 1}</td>
+                                <td className="px-4 py-4 align-middle text-sm whitespace-nowrap text-gray-500 w-12">{(page - 1) * perPage + idx + 1}</td>
 
-                                <td className="px-4 py-4 align-middle">
+                                <td className="px-4 py-4 align-middle whitespace-nowrap">
                                     <div className="flex items-center gap-3">
                                         <Avatar name={admin.name} src={admin.avatar} />
                                         <div>
@@ -312,11 +312,11 @@ export default function AdministratorsTable() {
                                     </div>
                                 </td>
 
-                                <td className="px-4 py-4 align-middle text-sm text-gray-500 w-36">{admin.created}</td>
+                                <td className="px-4 py-4 whitespace-nowrap align-middle text-sm text-gray-500 w-36">{admin.created}</td>
 
-                                <td className="px-4 py-4 align-middle text-sm text-gray-500 w-40">{admin.lastLogin}</td>
+                                <td className="px-4 py-4 align-middle whitespace-nowrap text-sm text-gray-500 w-40">{admin.lastLogin}</td>
 
-                                <td className="px-4 py-4 align-middle w-36">
+                                <td className="px-4 py-4 whitespace-nowrap align-middle w-36">
                                     <div className="flex items-center">
 
                                         <RoleBadge role={admin.role} />
@@ -324,7 +324,7 @@ export default function AdministratorsTable() {
 
                                 </td>
 
-                                <td className="px-4 py-4 align-middle w-20">
+                                <td className="px-4 py-4 whitespace-nowrap align-middle w-20">
 
                                     <div className="relative inline-block text-left">
                                         <ActionMenu
