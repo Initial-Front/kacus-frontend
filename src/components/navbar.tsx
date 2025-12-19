@@ -481,7 +481,9 @@ export default function Sidebar({ toggleSideBar, setToggleSideBar }: sideBarProp
                         </span>
                         <span className={`${openSideBar ? 'hidden' : 'block'}`}> Messaging</span>
                     </Link>
+
                     <hr />
+
                     <Link
                         to="/dashboard/Admin"
                         className={`flex items-center gap-2 px-2  py-2 rounded-lg ${location.pathname === "/dashboard/Admin" ? "bg-blue-50 text-blue-700 " : "bg-transparent hover:bg-gray-100"} font-medium w-full`}>
@@ -517,12 +519,18 @@ export default function Sidebar({ toggleSideBar, setToggleSideBar }: sideBarProp
                         <span className={`${openSideBar ? 'hidden' : 'block'}`}> Admin Activity</span>
                     </Link>
 
-                    <button className="flex items-center gap-2  my-3 p-2 rounded-lg hover:bg-gray-100 w-full">
-                        <Settings size={18} /> <span className={`${openSideBar ? 'hidden' : 'block'}`}>Settings</span>
-                    </button>
+                    <Link
+                        to='/Setting'
+                        className={`flex items-center gap-2 px-2   py-2 rounded-lg ${location.pathname === "/Setting" ? "bg-blue-50 text-blue-700 " : "bg-transparent hover:bg-gray-100"} font-medium w-full`}>
+                        <Settings
+                         className={`${location.pathname === "/Setting" ? "bg-blue-50 text-blue-700 " : "bg-transparent hover:bg-gray-100"} `}
+                        size={18} /> <span className={`${openSideBar ? 'hidden' : 'block'}`}>Settings</span>
+                    </Link>
+
+
                 </nav>
 
-                <div className="mt-auto ">
+                <div className="mt-6 ">
                     <div className="flex items-center gap-3 p-2 border rounded-xl hover:bg-gray-50 cursor-pointer">
                         <div className="w-10 h-10 rounded-full bg-gray-300" />
                         <div className={`flex flex-col text-sm ${openSideBar ? 'hidden' : 'block'}`}>
@@ -542,7 +550,7 @@ export default function Sidebar({ toggleSideBar, setToggleSideBar }: sideBarProp
                 <div className="flex items-center gap-2  justify-between">
 
 
-                   <img src="/Kaucus1 LOGO.png" alt="logo"/>
+                    <img src="/Kaucus1 LOGO.png" alt="logo" />
 
                     <button
                         onClick={() => setToggleSideBar(false)}
@@ -798,13 +806,14 @@ export default function Sidebar({ toggleSideBar, setToggleSideBar }: sideBarProp
 
 
                         </span>
-
                         Admin Activity
                     </Link>
 
-                    <button className="flex items-center gap-2  my-3 p-2 rounded-lg hover:bg-gray-100">
+                    <Link
+                        to='/Setting'
+                        className={`flex items-center gap-2 px-2  py-2 rounded-lg ${location.pathname === '/Setting' ? "bg-blue-50 text-blue-700 " : "bg-transparent hover:bg-gray-100"} font-medium`}>
                         <Settings size={18} /> Settings
-                    </button>
+                    </Link>
                 </nav>
 
                 <div className="mt-auto ">

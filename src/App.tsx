@@ -23,6 +23,7 @@ import OverView from './Dashboard/WalletTreasury/overView'
 import WalletMonitoring from './Dashboard/WalletTreasury/WalletMonitoring'
 import FundMovement from './Dashboard/WalletTreasury/Fundmovement'
 import Messaging from './Dashboard/Messaging'
+import Setting from './Dashboard/Settings'
 
 function App() {
   return (
@@ -54,6 +55,7 @@ function App() {
         <Route path='/WalletMonitoring' element={<WalletMonitoring/>} />
          <Route path='/FundMovement' element={<FundMovement/>} />
          <Route path='/Message' element={<Messaging/>} />
+          <Route path='/Setting' element={<Setting/>} />
       </Route>
 
     </Routes>

@@ -49,7 +49,7 @@ export default function Message() {
         <div className="p-6">
             <div className="flex items-center justify-between mb-6">
                 <div>
-                    <h1 className="text-xl flex items-center gap-1 font-semibold text-gray-800">
+                    <h1 className="text-[24px] flex items-center gap-1 font-bold text-gray-800">
                         Messaging
                         <span className="ms-4">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,18 +57,18 @@ export default function Message() {
                             </svg>
 
                         </span>
-                        <span className="text-sm ">
+                        <span className="text-sm font-normal ">
                             Messaging
                         </span>
 
                     </h1>
-                    <p className="text-sm text-gray-500 mt-2">
+                    <p className="text-sm max-w-2xl text-wrap text-gray-500 mt-2">
                         Manage announcements, push notifications, compliance alerts, and knowledge base content for all user.
                     </p>
                 </div>
 
                 <button
-                    className="px-4 py-2 bg-blue-600 text-white rounded-lg flex items-center gap-2 text-sm hover:bg-blue-700 transition"
+                    className="px-4 py-3 bg-blue-600 text-white rounded-lg flex items-center gap-2 text-sm hover:bg-blue-700 transition"
                 >
 
                     <span>
