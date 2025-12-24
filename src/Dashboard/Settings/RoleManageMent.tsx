@@ -59,7 +59,7 @@ const RoleManagement: FC = () => {
 
                 <button
                     onClick={() => setModalOpen(true)}
-                    className="flex items-center gap-2 bg-blue-600 text-white w-fit md:w-0 px-4 py-3 rounded-lg text-sm font-medium hover:bg-blue-700 transition">
+                    className="flex items-center gap-2 bg-blue-600 text-white w-fit  px-4 py-3 rounded-lg text-sm font-medium hover:bg-blue-700 transition">
                     <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5 10H15" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         <path d="M10 15V5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
